@@ -4,124 +4,20 @@ import android.app.Application;
 import android.test.ApplicationTestCase;
 
 import com.ligen.wellwatcher.dao.CheckInfoDao;
-import com.ligen.wellwatcher.dao.CheckRecordDao;
 import com.ligen.wellwatcher.dao.UserDao;
-import com.ligen.wellwatcher.model.CheckRecord;
-import com.ligen.wellwatcher.model.Checkpoint;
-import com.ligen.wellwatcher.model.DeviceRecord;
-import com.ligen.wellwatcher.model.User;
-import com.ligen.wellwatcher.util.SharePrerenceUtil;
-
-import java.util.Date;
-import java.util.List;
 
 /**
- * <a href="http://d.android.com/tools/testing/testing_android.html">Testing Fundamentals</a>
+ * Created by ligen on 2016/7/1.
  */
-public class ApplicationTest extends ApplicationTestCase<Application> {
-    public ApplicationTest() {
+public class ApplicationInit extends ApplicationTestCase<Application> {
+
+    public ApplicationInit() {
         super(Application.class);
     }
 
-    public void testAddUser() {
-//        UserDao.getDao(getContext()).addUser("大力", "123", "员工");
-//        UserDao.getDao(getContext()).addUser("技安", "123", "员工");
-//        UserDao.getDao(getContext()).addUser("大熊", "123", "管理员");
-        UserDao.getDao(getContext()).addUser("ADMIN", "123", null);
-    }
-
-    public void testGetUsers() {
-        List<User> allUsers = UserDao.getDao(getContext()).getAllUsers();
-        for (User user : allUsers) {
-            System.out.println(user.getName());
-        }
-    }
-
-    public void testAddType() {
-        CheckInfoDao.getDao(getContext()).addType("泥浆工");
-        CheckInfoDao.getDao(getContext()).addType("井架工");
-        CheckInfoDao.getDao(getContext()).addType("司钻");
-        CheckInfoDao.getDao(getContext()).addType("内钳工");
-        CheckInfoDao.getDao(getContext()).addType("外钳工");
-        CheckInfoDao.getDao(getContext()).addType("场地工");
-    }
-
-    public void testRemoveType() {
-        CheckInfoDao.getDao(getContext()).removeType("管理员");
-    }
-
-    public void testGetTypes() {
-        List<User> allUsers = UserDao.getDao(getContext()).getAllUsers();
-        for (User user : allUsers) {
-            System.out.println(user.getName());
-        }
-    }
-
-    public void testAddDevice() {
-        CheckInfoDao.getDao(getContext()).addDevice("泥浆值班房", "泥浆工");
-    }
-
-    public void testgetDevices() {
-
-        List<String> devices = CheckInfoDao.getDao(getContext()).getDevicesByType("泥浆工");
-        for (String device : devices) {
-            System.out.println(device);
-        }
-    }
-
-    public void testAddCheckpoint() {
-        CheckInfoDao.getDao(getContext()).addCheckpoint("旋转粘度计", "泥浆值班房");
-        CheckInfoDao.getDao(getContext()).addCheckpoint("用水", "泥浆值班房");
-        CheckInfoDao.getDao(getContext()).addCheckpoint("接地", "泥浆值班房");
-    }
-
-    public void testGetCheckpoint() {
-        List<Checkpoint> list = CheckInfoDao.getDao(getContext()).getCheckpoint("泥浆值班房");
-        for (Checkpoint checkpoint : list) {
-            System.out.println(checkpoint.getCheckpoint());
-        }
-    }
-
-    public void testRemoveCheckpoint() {
-        CheckInfoDao.getDao(getContext()).removeCheckpoint("device1");
-    }
-
-    public void testAddCheckRecord() {
-        CheckRecordDao.getDao(getContext()).saveCheckRecord("大熊", "泥浆值班房", "旋转粘度计", 1);
-    }
-
-    public void testGetCheckRecord() {
-        List<CheckRecord> checkRecords = CheckRecordDao.getDao(getContext()).getRecordByUsernameAndDevice("大熊", "泥浆值班房");
-        for (CheckRecord checkRecord : checkRecords) {
-            System.out.println(checkRecord.getCheckpoint());
-        }
-    }
-
-    public void testAddCheckDevice() {
-        CheckRecordDao.getDao(getContext()).saveCheckDevice("大熊", "泥浆值班房", 1, new Date());
-    }
-
-    public void testGetCheckDevice() {
-        List<DeviceRecord> drs = CheckRecordDao.getDao(getContext()).getAllRecordDevicesByUsername("大熊");
-        for (DeviceRecord dr : drs) {
-            System.out.println(dr.getDevicename());
-            System.out.println(dr.getUsername());
-        }
-    }
-
-    public void testRemoveCheckDevice() {
-        CheckRecordDao.getDao(getContext()).removeCheckDevicesByUsername("大熊");
-        CheckRecordDao.getDao(getContext()).removeCheckRecordByUsername("大熊");
-
-    }
-
-    public void testReload() {
-        SharePrerenceUtil.clearUser(getContext());
-    }
-
-    public void testInit() {
-
+    public void appInit() {
         //初始化用户
+        CheckInfoDao.getDao(getContext()).addType("管理员");
         CheckInfoDao.getDao(getContext()).addType("泥浆工");
         CheckInfoDao.getDao(getContext()).addType("井架工");
         CheckInfoDao.getDao(getContext()).addType("司钻");
