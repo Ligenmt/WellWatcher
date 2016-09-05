@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources value="init">
+    <type value="泥浆工">
+        <device value="泥浆值班房">
+            <checkpoint>旋转粘度计</checkpoint>
+            <checkpoint>用水</checkpoint>
+            <checkpoint>接地</checkpoint>
+        </device>
+        <device value="药品罐">
+            <checkpoint>罐面清洁</checkpoint>
+            <checkpoint>闸门</checkpoint>
+            <checkpoint>搅拌器接线</checkpoint>
+        </device>
+        <device value="除砂器">
+            <checkpoint>固定牢靠</checkpoint>
+            <checkpoint>设备润滑</checkpoint>
+            <checkpoint>护罩齐全</checkpoint>
+            <checkpoint>筛布筛框</checkpoint>
+            <checkpoint>电机</checkpoint>
+            <checkpoint>漏斗</checkpoint>
+            <checkpoint>管线</checkpoint>
+        </device>
+        <device value="砂泵">
+            <checkpoint>罐面清洁</checkpoint>
+            <checkpoint>闸门</checkpoint>
+            <checkpoint>搅拌器接线</checkpoint>
+        </device>
+        <device value="搅拌器">
+            <checkpoint>固定牢靠</checkpoint>
+            <checkpoint>润滑清洁</checkpoint>
+            <checkpoint>护罩齐全</checkpoint>
+            <checkpoint>电机</checkpoint>
+            <checkpoint>搅拌器叶轮</checkpoint>
+        </device>
+        <device value="离心机">
+            <checkpoint>润滑清洁</checkpoint>
+            <checkpoint>电机</checkpoint>
+            <checkpoint>供液泵</checkpoint>
+            <checkpoint>管线</checkpoint>
+        </device>
+        <device value="泥浆循环罐">
+            <checkpoint>梯子牢靠</checkpoint>
+            <checkpoint>护栏</checkpoint>
+            <checkpoint>罐面</checkpoint>
+            <checkpoint>储备浆</checkpoint>
+            <checkpoint>管线</checkpoint>
+            <checkpoint>电源开关</checkpoint>
+            <checkpoint>药品罐</checkpoint>
+        </device>
+        <device value="工业水罐">
+            <checkpoint>梯子牢靠</checkpoint>
+        </device>
+        <device value="混合漏斗">
+            <checkpoint>漏斗完好</checkpoint>
+            <checkpoint>整洁干净</checkpoint>
+        </device>
+        <device value="材料爬犁">
+            <checkpoint>处理剂</checkpoint>
+        </device>
+        <device value="坐岗房">
+            <checkpoint>记录齐全</checkpoint>
+            <checkpoint>量具齐全</checkpoint>
+            <checkpoint>卫生整洁</checkpoint>
+        </device>
+        <device value="泥浆材料房">
+            <checkpoint>处理剂</checkpoint>
+            <checkpoint>门上通风</checkpoint>
+            <checkpoint>整洁卫生</checkpoint>
+        </device>
+    </type>
+
+    <type value="副司钻">
+        <device value="值班房">
+            <checkpoint>旋转粘度计</checkpoint>
+            <checkpoint>用水</checkpoint>
+            <checkpoint>接地</checkpoint>
+        </device>
+        <device value="循环罐">
+            <checkpoint>旋转粘度计</checkpoint>
+            <checkpoint>用水</checkpoint>
+            <checkpoint>接地</checkpoint>
+        </device>
+        <device value="储备罐">
+            <checkpoint>旋转粘度计</checkpoint>
+            <checkpoint>用水</checkpoint>
+            <checkpoint>接地</checkpoint>
+        </device>
+        <device value="值班房">
+            <checkpoint>旋转粘度计</checkpoint>
+            <checkpoint>用水</checkpoint>
+            <checkpoint>接地</checkpoint>
+        </device>
+        <device value="钻井泵">
+            <checkpoint>旋转粘度计</checkpoint>
+            <checkpoint>用水</checkpoint>
+            <checkpoint>接地</checkpoint>
+        </device>
+        <device value="工具箱">
+            <checkpoint>旋转粘度计</checkpoint>
+            <checkpoint>用水</checkpoint>
+            <checkpoint>接地</checkpoint>
+        </device>
+        <device value="高压管汇">
+            <checkpoint>旋转粘度计</checkpoint>
+            <checkpoint>用水</checkpoint>
+            <checkpoint>接地</checkpoint>
+        </device>
+        <device value="节流管汇">
+            <checkpoint>旋转粘度计</checkpoint>
+            <checkpoint>用水</checkpoint>
+            <checkpoint>接地</checkpoint>
+        </device>
+        <device value="液气分离器">
+            <checkpoint>旋转粘度计</checkpoint>
+            <checkpoint>用水</checkpoint>
+            <checkpoint>接地</checkpoint>
+        </device>
+        <device value="防喷器">
+            <checkpoint>旋转粘度计</checkpoint>
+            <checkpoint>用水</checkpoint>
+            <checkpoint>接地</checkpoint>
+        </device>
+        <device value="压井管汇">
+            <checkpoint>旋转粘度计</checkpoint>
+            <checkpoint>用水</checkpoint>
+            <checkpoint>接地</checkpoint>
+        </device>
+        <device value="远程控制台">
+            <checkpoint>旋转粘度计</checkpoint>
+            <checkpoint>用水</checkpoint>
+            <checkpoint>接地</checkpoint>
+        </device>
+        <device value="测斜房">
+            <checkpoint>旋转粘度计</checkpoint>
+            <checkpoint>用水</checkpoint>
+            <checkpoint>接地</checkpoint>
+        </device>
+    </type>
+
+    <type value="司钻">
+        <device value="值班房内检查">
+            <checkpoint>资料齐全，填写准确</checkpoint>
+            <checkpoint>了解井深、钻时及地质提示</checkpoint>
+            <checkpoint>钻井液性能符合设计要求</checkpoint>
+        </device>
+        <device value="辅助刹车">
+            <checkpoint>刹车有效可靠</checkpoint>
+            <checkpoint>各固定螺栓固定牢靠</checkpoint>
+            <checkpoint>运转正常，滑键摘挂灵活</checkpoint>
+            <checkpoint>冷却、润滑良好，不漏气不漏水</checkpoint>
+        </device>
+        <device value="大绳">
+            <checkpoint>活绳头紧固牢靠，余量长度不小于20cm</checkpoint>
+            <checkpoint>钢丝绳断丝不超标、电弧烧灼、过电退火、严重锈蚀、扭结</checkpoint>
+            <checkpoint>大绳排列整齐、不打扭</checkpoint>
+        </device>
+        <device value="滚筒">
+            <checkpoint>各固定螺栓齐全、紧固</checkpoint>
+        </device>
+        <device value="测斜房">
+            <checkpoint>旋转粘度计</checkpoint>
+            <checkpoint>用水</checkpoint>
+            <checkpoint>接地</checkpoint>
+        </device>
+        <device value="高低速离合器">
+            <checkpoint>导气（水)龙头及管线不漏气（水）</checkpoint>
+            <checkpoint>气囊、钢毂完好无油污</checkpoint>
+            <checkpoint>摩擦片磨损不超标</checkpoint>
+        </device>
+        <device value="刹车系统">
+            <checkpoint>液压盘刹摩擦片剩余厚度≥14mm，摩擦盘磨损≤10mm</checkpoint>
+            <checkpoint>液压盘刹摩擦盘摩擦片间隙调整合适，无油污</checkpoint>
+        </device>
+        <device value="防碰天车">
+            <checkpoint>过卷阀、重锤灵活好用、气路畅通</checkpoint>
+            <checkpoint>开口销符合使用要求，保险可靠</checkpoint>
+            <checkpoint>防碰天车绳松紧合适、无打扭及缠挂井架现象</checkpoint>
+            <checkpoint>电子数码防碰装置及传感器、电磁阀完好、正常</checkpoint>
+            <checkpoint>报警提示及刹车设定正确</checkpoint>
+            <checkpoint>作为引绳的φ6.4mm钢丝绳上端固定牢靠，下端与防碰天车开关重锤用开口销连接，不扭不打结，松紧度合适，与井架无挂碰现象</checkpoint>
+            <checkpoint>放下重锤，检查进气情况是否良好</checkpoint>
+            <checkpoint>数码防碰屏显清晰，数字准确，报警灵敏</checkpoint>
+            <checkpoint>防碰天车挡绳距天车滑轮应大于4m</checkpoint>
+        </device>
+        <device value="司钻井控操作台">
+            <checkpoint>仪表齐全、完好、准确</checkpoint>
+            <checkpoint>气源压力符合要求（0.65-0.8MPa）</checkpoint>
+            <checkpoint>气控阀手柄齐全、工作正常，各连接管线和接头无泄露</checkpoint>
+            <checkpoint>无障碍物，操作方便</checkpoint>
+        </device>
+        <device value="司钻井控操作台">
+            <checkpoint>仪表齐全、完好、准确</checkpoint>
+            <checkpoint>气源压力符合要求（0.65-0.8MPa）</checkpoint>
+            <checkpoint>气控阀手柄齐全、工作正常，各连接管线和接头无泄露</checkpoint>
+            <checkpoint>无障碍物，操作方便</checkpoint>
+        </device>
+        <device value="司钻井控操作台">
+            <checkpoint>仪表齐全、完好、准确</checkpoint>
+            <checkpoint>气源压力符合要求（0.65-0.8MPa）</checkpoint>
+            <checkpoint>气控阀手柄齐全、工作正常，各连接管线和接头无泄露</checkpoint>
+            <checkpoint>无障碍物，操作方便</checkpoint>
+        </device>
+        <device value="司钻井控操作台">
+            <checkpoint>仪表齐全、完好、准确</checkpoint>
+            <checkpoint>气源压力符合要求（0.65-0.8MPa）</checkpoint>
+            <checkpoint>气控阀手柄齐全、工作正常，各连接管线和接头无泄露</checkpoint>
+            <checkpoint>无障碍物，操作方便</checkpoint>
+        </device>
+        <device value="司钻井控操作台">
+            <checkpoint>仪表齐全、完好、准确</checkpoint>
+            <checkpoint>气源压力符合要求（0.65-0.8MPa）</checkpoint>
+            <checkpoint>气控阀手柄齐全、工作正常，各连接管线和接头无泄露</checkpoint>
+            <checkpoint>无障碍物，操作方便</checkpoint>
+        </device>
+        <device value="死绳">
+            <checkpoint>各固定螺栓齐全、紧固、无余扣，备帽齐全</checkpoint>
+        </device>
+        <device value="固定器">
+            <checkpoint>钢丝绳排列整齐，按固定围槽排满，挡绳杆齐全并加护套</checkpoint>
+            <checkpoint>压力传感器、传压管线连接牢固、无渗漏</checkpoint>
+            <checkpoint>钢丝绳排列整齐，按固定围槽排满，挡绳杆齐全并加护套</checkpoint>
+        </device>
+        <device value="立管压力表">
+            <checkpoint>防震压力表量程符合要求，表盘清洁，指示灵敏、准确</checkpoint>
+            <checkpoint>冬季采取防冻措施</checkpoint>
+        </device>
+        <device value="钻井参数仪">
+            <checkpoint>钻井参数仪表齐全完好、灵敏、准确、清洁</checkpoint>
+            <checkpoint>传压器及信号线连接牢固、绝缘、无渗漏</checkpoint>
+            <checkpoint>指重表、灵敏表与记录仪读数一致</checkpoint>
+            <checkpoint>钻井参数仪安装可靠，防水、防震</checkpoint>
+        </device>
+        <device value="司钻操作房">
+            <checkpoint>气开关灵活好用、固定牢靠，仪表齐全、准确、清洁</checkpoint>
+            <checkpoint>油、气管线连接牢固不漏气</checkpoint>
+            <checkpoint>总气压力为0.8-1.0MPa</checkpoint>
+            <checkpoint>电控箱各转换开关灵活好用</checkpoint>
+        </device>
+        <device value="回到值班房">
+            <checkpoint>主持召开班前会，接受生产任务书，填写接班记录</checkpoint>
+            <checkpoint>汇总各岗检查中发现的未整改问题或隐患并及时反映</checkpoint>
+            <checkpoint>安排本班生产内容、操作细节，提出安全要求等</checkpoint>
+            <checkpoint>下班后主持召开班后会，对班组生产情况进行总结</checkpoint>
+        </device>
+
+
+    </type>
+    <type value="井架工">
+        <device value="值班房内检查">
+            <checkpoint>查看工程班报表，了解井深及施工情况</checkpoint>
+            <checkpoint>查看天车、游车、大钩、水龙头、转盘等设备运转情况</checkpoint>
+        </device>
+        <device value="场地">
+            <checkpoint>大绳抽倒装置配置完整</checkpoint>
+            <checkpoint>钻台上下各种固定销、剪切销、别针齐全牢固、方向正确，封井器和井口、井架底座及拉筋或顶杠无变形、无裂纹，清洁卫生</checkpoint>
+        </device>
+
+        <device value="井架及底座">
+            <checkpoint>井架主体、底座、井架梯子、操作台、立管平台、二层台、天车台梯子栏杆连接销子、剪切销、齐全。井架无变形、裂纹</checkpoint>
+            <checkpoint>B型钳、液气大钳、风动绞车滑轮悬挂牢靠，钢丝绳无断丝、不打结</checkpoint>
+            <checkpoint>稳绳器固定牢靠，并系好保险绳</checkpoint>
+            <checkpoint>立管用卡箍、U型卡（或压板）与井架卡牢、紧固，V型卡数量足够</checkpoint>
+            <checkpoint>保险带两幅，且完好、绑牢</checkpoint>
+            <checkpoint>操作台固定牢固，兜绳、工具齐全完好，二层台工具必须固定牢靠</checkpoint>
+            <checkpoint>二层台立柱排放架、钻链卡板不变形，固定牢靠</checkpoint>
+        </device>
+
+        <device value="井架及底座(2)">
+            <checkpoint>天车固定牢靠、挡绳杆齐全、润滑良好</checkpoint>
+            <checkpoint>二层台逃生装置安全可靠</checkpoint>
+            <checkpoint>登梯助力器固定连接安全可靠</checkpoint>
+            <checkpoint>天车台上起重架固定牢靠</checkpoint>
+            <checkpoint>上井架所需安全带符合安全标准，安全可靠，无破损</checkpoint>
+            <checkpoint>井架附件齐全、牢靠、完好，井架无裂缝、腐蚀，井架对角线偏差±10mm，天车中心、游车与井口中心偏差不大于±10mm，井架大腿全长弯曲不大于40mm</checkpoint>
+            <checkpoint>井架连接销与销孔匹配完好由外向内穿法，连接牢靠，井架穿好保险销，销子无退出现象</checkpoint>
+            <checkpoint>人字架螺丝及起升滑轮固定牢靠、齐全完好、润滑保养及时、转动灵活</checkpoint>
+            <checkpoint>各种绳索符合安全要求，无断丝现象</checkpoint>
+            <checkpoint>各悬吊滑轮的固定牢固，无损坏，转动灵活</checkpoint>
+            <checkpoint>井架照明设施固定紧固，完好</checkpoint>
+            <checkpoint>立管固定牢固</checkpoint>
+            <checkpoint>与立管连接水龙带连接紧密，无刺漏</checkpoint>
+            <checkpoint>与立管连接水龙带保险链两端固定牢固，固定卡紧</checkpoint>
+        </device>
+
+        <device value="二层台（使用前检查）">
+            <checkpoint>二层台、操作台及栏杆固定牢固、销子齐全</checkpoint>
+            <checkpoint>二层台立柱排放架、钻铤卡板不变形，固定牢靠</checkpoint>
+            <checkpoint>钻杆排列及数量符合要求</checkpoint>
+            <checkpoint>二层台风动绞车固定牢靠，护罩齐全完好，钢丝绳（直径7.5mm）无断丝、电弧烧灼、锈蚀等现象</checkpoint>
+            <checkpoint>二层台逃生装置安全可靠</checkpoint>
+            <checkpoint>二层台、操作台无杂物</checkpoint>
+            <checkpoint>登梯助力器固定连接安全可靠</checkpoint>
+        </device>
+
+        <device value="天车（周检）">
+            <checkpoint>天车“U”型卡子齐全完好，固定牢靠</checkpoint>
+            <checkpoint>防碰木固定牢固，螺丝及卡子完好，用四卡双帽并垫不小于100mm方木固定牢靠</checkpoint>
+            <checkpoint>天车台栏杆及护罩固定牢固，完好，齐全牢靠，有挡绳杆，螺丝及卡子齐全完好</checkpoint>
+            <checkpoint>滑轮润滑良好、转动灵活、完好轮槽无严重磨损，轴承保养良好</checkpoint>
+            <checkpoint>滑轮黄油嘴齐全完好</checkpoint>
+        </device>
+
+        <device value="游车大钩（起下钻前检查）">
+            <checkpoint>游车护罩完好无损、固定螺丝齐全完好</checkpoint>
+            <checkpoint>滑轮润滑良好及时、转动灵活、黄油嘴齐全完好</checkpoint>
+            <checkpoint>大钩转动灵活，保险销完好可靠，无变形、裂纹</checkpoint>
+            <checkpoint>大钩钩口，开关灵活，提环活动自如，黄油嘴齐全完好</checkpoint>
+            <checkpoint>吊环完好可靠，无变形、裂纹，吊环保险绳固定规范牢固</checkpoint>
+        </device>
+
+        <device value="水龙头（周检）">
+            <checkpoint>水龙头加油孔，看油量、油质符合正常运转要求</checkpoint>
+            <checkpoint>水龙头固定及润滑良好、转动灵活，旋转时不刺不漏</checkpoint>
+            <checkpoint>水龙头连接水龙带保险链两端固定牢固，固定卡紧</checkpoint>
+        </device>
+
+        <device value="气动上扣器">
+            <checkpoint>外壳用φ12.7mm钢丝绳与水龙头外壳连接牢靠，马达、继气器、气管线和油杯固定可靠，并加装保险绳，固定牢靠。</checkpoint>
+        </device>
+
+        <device value="节流阀控制箱">
+            <checkpoint>仪表齐全、灵敏、准确、清洁（气泵压力表0.6-1.0MPa，油压表1.0-2.0MPa）</checkpoint>
+            <checkpoint>阀位开启为零位，立柱压力表、套压表显示符合工况，换向阀手柄位置正确</checkpoint>
+            <checkpoint>水龙头连接水龙带保险链两端固定牢固，固定卡紧</checkpoint>
+        </device>
+        <device value="检查转盘">
+            <checkpoint>转盘固定及润滑良好、转动灵活，旋转时不刺不漏，运转正常，无跳动、异响和发烧</checkpoint>
+            <checkpoint>方补心符合正常生产要求、使用灵活</checkpoint>
+            <checkpoint>固定螺栓齐全牢靠</checkpoint>
+            <checkpoint>转盘及传动系统运转平稳、无噪音</checkpoint>
+        </device>
+        <device value="回到值班房">
+            <checkpoint>班前会：及时向司钻反映巡回检查中发现的未整改问题，接受司钻的任务分工</checkpoint>
+            <checkpoint>班前会：明确本班本岗位操作的安全要求和设备保养内容</checkpoint>
+            <checkpoint>班后会：认真总结本班本岗位工作任务执行及完成情况，进行班后安全讲评</checkpoint>
+        </device>
+    </type>
+    <type value="内钳工">
+        <device value="值班房内检查">
+            <checkpoint>查看工程班报表，了解施工进度</checkpoint>
+            <checkpoint>查看辅助刹车、绞车等设备运转保养记录的填写</checkpoint>
+        </device>
+        <device value="冷却水罐和循环水罐">
+            <checkpoint>水罐水质、水量符合使用要求</checkpoint>
+            <checkpoint>循环冷却水泵及电动机固定牢靠，运转正常</checkpoint>
+            <checkpoint>循环水管线无泄露</checkpoint>
+            <checkpoint>冬季防冻</checkpoint>
+        </device>
+        <device value="辅助刹车">
+            <checkpoint>固定牢靠，刹车有效可靠</checkpoint>
+            <checkpoint>刹车冷却风机运转正常（水冷式供排水正常），滑键离合器灵活好用</checkpoint>
+        </device>
+        <device value="绞车">
+            <checkpoint>绞车及其护罩固定牢靠，钢丝绳排列整齐</checkpoint>
+            <checkpoint>绞车所有轴承、链条、链轮、换挡离合器、刹车机构、水气葫芦、快绳挡辐传动、万向轴润滑良好</checkpoint>
+            <checkpoint>链条松紧合适，开口销、弹簧销、链板齐全完好</checkpoint>
+            <checkpoint>绞车运转正常，无异响，各轴承温度不超过90℃</checkpoint>
+            <checkpoint>各离合器继气器进、排气正常，冬季采取防冻措施</checkpoint>
+            <checkpoint>绞车清洁卫生</checkpoint>
+            <checkpoint>油池润滑油量、油质符合使用要求，机油泵运转正常，油压符合要求，油管线无泄露，滤清器清洁</checkpoint>
+            <checkpoint>绞车惯性刹车离合器固定牢靠，摩擦片完好，磨损量不超过规定值，支撑轴承润滑良好</checkpoint>
+        </device>
+        <device value="排绳器">
+            <checkpoint>滑轮固定连接牢靠，润滑良好</checkpoint>
+            <checkpoint>钢丝绳绳卡固定符合要求</checkpoint>
+            <checkpoint>排绳器滚子转动灵活，滚轮间距满足工作需要</checkpoint>
+        </device>
+        <device value="立管压力表、钻井参数仪">
+            <checkpoint>立管压力表齐全完好，指示灵敏、准确，表盘清洁</checkpoint>
+            <checkpoint>钻井参数仪清洁卫生</checkpoint>
+        </device>
+        <device value="内钳">
+            <checkpoint>钳柄不允许有裂纹</checkpoint>
+            <checkpoint>各部位配合要用专用销连接，绝不允许使用代用销</checkpoint>
+            <checkpoint>连接部位机油润滑灵活，无阻卡现象</checkpoint>
+            <checkpoint>钳牙要装整齐，无松动现象，挡销齐全，钳牙上无油泥，磨损量不影响使用要求</checkpoint>
+            <checkpoint>钳体水平，上下移动灵活，与吊绳连接牢靠</checkpoint>
+            <checkpoint>钳柄尾部固定牢靠</checkpoint>
+            <checkpoint>钳尾绳使用直径22mm钢丝绳，无断丝，两端各用三个绳卡卡紧，卡距符合要求</checkpoint>
+        </device>
+        <device value="液气大钳">
+            <checkpoint>吊绳及尾座固定牢靠（吊绳使用直径19mm钢丝绳）</checkpoint>
+            <checkpoint>钳头顿板、堵头尺寸与钻具尺寸相符</checkpoint>
+            <checkpoint>钳牙齐全完好、固定牢靠，钳头进退活动灵活、转动无阻卡，刹带调节合适</checkpoint>
+            <checkpoint>移送气缸、夹紧气缸伸缩、活动自由，不漏气</checkpoint>
+            <checkpoint>大钳安全门框齐全、可靠、灵活好用</checkpoint>
+            <checkpoint>手动液压换向阀、溢流阀、管线连接处紧密、无渗漏</checkpoint>
+            <checkpoint>气控元件固定完好，连接紧密、无漏气，快放阀灵活好用</checkpoint>
+        </device>
+        <device value="液压猫头">
+            <checkpoint>液压站油量、油温、油质、油压符合使用要求，表面清洁</checkpoint>
+            <checkpoint>液压站电动机、柱塞泵运转正常、无杂音，电动机接地良好</checkpoint>
+            <checkpoint>液压猫头固定牢靠，导向轮运转正常润滑良好</checkpoint>
+            <checkpoint>钢丝绳安全可靠，无断丝</checkpoint>
+        </device>
+        <device value="值班房">
+            <checkpoint>及时向司钻反映巡回检查中发现的未整改问题</checkpoint>
+            <checkpoint>接受司钻的任务分工，明确本班本岗位操作的安全要求和设备保养内容</checkpoint>
+            <checkpoint>认真总结本班本岗位工作任务执行及完成情况</checkpoint>
+        </device>
+    </type>
+    <type value="外钳工">
+        <device value="值班房内检查">
+            <checkpoint>查看工程班报表，了解施工进度</checkpoint>
+            <checkpoint>查看转盘传动装置等设备运转保养记录</checkpoint>
+            <checkpoint>的填写是否及时、准确，有无错漏</checkpoint>
+        </device>
+
+        <device value="大门坡道与钻台梯子、栏杆">
+            <checkpoint>钻台梯子及扶手齐全，固定牢靠，踏板齐全完好销子及别针齐全</checkpoint>
+            <checkpoint>钻台大门坡道、安全滑梯固定牢靠，销子及别针齐全</checkpoint>
+            <checkpoint>钻台栏杆固定牢靠、踢脚板齐全完好</checkpoint>
+            <checkpoint>钻台上各梯子及坡道口处防护链齐全</checkpoint>
+        </device>
+
+        <device value="液压猫头">
+            <checkpoint>固定牢靠、清洁、护罩齐全</checkpoint>
+            <checkpoint>黄油嘴齐全、润滑良好，不变质</checkpoint>
+            <checkpoint>链条齐全，万向轴连接固定牢靠</checkpoint>
+            <checkpoint>猫头平滑无槽，滚杠固定牢靠、转动灵活，挡板齐全</checkpoint>
+            <checkpoint>使用液压猫头时钢丝绳完好，液压缸固定牢靠，灵活好用，不渗油、漏油</checkpoint>
+        </device>
+
+        <device value="转盘驱动装置">
+            <checkpoint>转盘及转盘风机装置固定牢固，润滑油油量、油质符合用油要求，电机工作正常，各支承轴承运转时温度正常，滚子方补心螺栓紧固。</checkpoint>
+        </device>
+
+        <device value="安全卡瓦">
+            <checkpoint>卡瓦整体完好，灵活好用，不打滑、不松动</checkpoint>
+            <checkpoint>牙弹簧固定好并灵活好用，各轴节灵活，并加黄油或机油润滑</checkpoint>
+            <checkpoint>卡瓦的节数与被卡钻具的直径相符</checkpoint>
+            <checkpoint>螺丝杆和螺母符合使用标准</checkpoint>
+            <checkpoint>销子与本体用保险链连接牢靠</checkpoint>
+        </device>
+
+        <device value="井口工具">
+            <checkpoint>吊卡舌头、活门、保险销灵活可靠，润滑良好（平台阶吊卡，台阶磨损大于3mm必须更换），保险销必须使用磁性销子</checkpoint>
+            <checkpoint>钻头盒把手、盖板结实、无裂缝，防喷盒把手、盒体完好，开关灵活</checkpoint>
+            <checkpoint>提升短节、配合接头摆放整齐，维护良好</checkpoint>
+            <checkpoint>上下旋塞、回压阀灵活好用，保养良好</checkpoint>
+        </device>
+
+        <device value="风动绞车">
+            <checkpoint>刹车可靠</checkpoint>
+            <checkpoint>固定牢靠、平稳，护罩齐全、清洁</checkpoint>
+            <checkpoint>起重用直径15.9mm钢丝绳，不打结、无锈蚀、无断丝漏</checkpoint>
+            <checkpoint>油杯油量充足，油质合格，黄油嘴齐全</checkpoint>
+            <checkpoint>吊钩与钢丝绳连接牢固，钩口安全装置齐全有效</checkpoint>
+        </device>
+
+        <device value="外钳">
+            <checkpoint>钳柄不允许有裂纹</checkpoint>
+            <checkpoint>各部位配合要用专用销连接，绝不允许使用代用销</checkpoint>
+            <checkpoint>连接部位机油润滑灵活，无阻卡现象</checkpoint>
+            <checkpoint>钳牙要装整齐，无松动现象，挡销齐全，钳牙上无油泥，磨损量不影响使用要求</checkpoint>
+            <checkpoint>钳体水平、上下移动灵活</checkpoint>
+            <checkpoint>钳柄尾部固定牢靠，钳尾销的保险销使用磁性销子，下面装别针</checkpoint>
+            <checkpoint>钳尾绳使用直径22mm钢丝绳，无断丝，两端各用固定牢靠，卡距符合要求</checkpoint>
+        </device>
+
+        <device value="钻台">
+            <checkpoint>钻杆钩子、刮泥器清洁完好</checkpoint>
+            <checkpoint>手工具清洁、摆放整齐、齐全无损坏</checkpoint>
+        </device>
+
+        <device value="偏房">
+            <checkpoint>黄油枪完好、使用灵活</checkpoint>
+            <checkpoint>管钳及链钳完好</checkpoint>
+            <checkpoint>钻台、钻台偏房清洁卫生</checkpoint>
+        </device>
+
+        <device value="油料">
+            <checkpoint>螺纹脂数量、质量满足要求，无泥沙、硬块</checkpoint>
+            <checkpoint>黄油、机油数量充足，质量合格</checkpoint>
+        </device>
+        <device value="值班房">
+            <checkpoint>及时向司钻反映巡回检查中发现的未整改问题</checkpoint>
+            <checkpoint>接受司钻的任务分工，明确本班本岗位操作的安全要求和设备保养内容</checkpoint>
+            <checkpoint>班后会：认真总结本班本岗位工作任务执行及完成情况</checkpoint>
+        </device>
+    </type>
+    <type value="场地工">
+        <device value="值班房内检查">
+            <checkpoint>及时向司钻反映巡回检查中发现的未整改问题</checkpoint>
+            <checkpoint>接受司钻的任务分工，明确本班本岗位操作的安全要求和设备保养内容</checkpoint>
+            <checkpoint>班后会：认真总结本班本岗位工作任务执行及完成情况</checkpoint>
+        </device>
+        <device value="钻具">
+            <checkpoint>钻具以内螺纹一端为基准按入井顺序排列编号，摆放整齐、数量准确</checkpoint>
+            <checkpoint>螺纹清洗干净，涂好螺纹脂，水眼畅通，无杂物</checkpoint>
+            <checkpoint>检查钻具有无损坏，好坏钻具标识明显，并分开摆放</checkpoint>
+            <checkpoint>钻具上、下钻台带好护丝</checkpoint>
+        </device>
+        <device value="井场">
+            <checkpoint>井场平整、卫生、无杂物</checkpoint>
+            <checkpoint>井场入口处应摆放“入场须知、紧急逃生路线牌”</checkpoint>
+            <checkpoint>井场应平坦坚实，能承受大型车辆的行驶，井场无坑洼、积水、油污现象</checkpoint>
+        </device>
+        <device value="工具">
+            <checkpoint>工具齐全完好清洁（钻杆护丝、提丝、锹、铺、扫把、绳索、撬杠等）</checkpoint>
+            <checkpoint>接受司钻的任务分工，明确本班本岗位操作的安全要求和设备保养内容</checkpoint>
+            <checkpoint>班后会：认真总结本班本岗位工作任务执行及完成情况</checkpoint>
+        </device>
+        <device value="振动筛">
+            <checkpoint>振动筛固定牢靠，无捆绑现象</checkpoint>
+            <checkpoint>设备润滑、工况良好，护罩齐全牢靠，有防污挡板，出沙处有导沙槽，对应罐体上加有导沙轨道</checkpoint>
+            <checkpoint>筛布使用符合工作要求，筛布完整，固定牢靠，筛布上及振动筛附近无积沙</checkpoint>
+            <checkpoint>检查返沙及钻井液返出情况</checkpoint>
+            <checkpoint>电动机接线防爆，运转正常，护罩齐全固定牢靠，接地线接地良好</checkpoint>
+            <checkpoint>若停用时，筛布用水清洗干净</checkpoint>
+            <checkpoint>进、排液管线密封良好、固定牢靠，不刺漏</checkpoint>
+        </device>
+        <device value="循环罐">
+            <checkpoint>循环罐清洁卫生</checkpoint>
+            <checkpoint>循环罐连接部位附件齐全，固定牢靠，管线畅通、不刺不漏，无捆绑现象，电缆无破损老化</checkpoint>
+            <checkpoint>循环罐走道平整牢固，与罐体缝隙不超过2cm，宽0.8m，畅通、无油污杂物，无严重锈蚀现象；护栏规格、质量数量符合安全规定要求，固定牢靠，无变形损坏</checkpoint>
+            <checkpoint>护栏规格、质量、数量符合安全规定要求，护栏之间连接缝隙不超过2cm，固定牢靠，无变形损坏</checkpoint>
+            <checkpoint>罐体保护接地</checkpoint>
+        </device>
+        <device value="高架槽">
+            <checkpoint>高架槽固定牢靠，不漏钻井液，槽内无积沙</checkpoint>
+        </device>
+        <device value="坐岗房">
+            <checkpoint>工程报表记录清洁、齐全、准确</checkpoint>
+        </device>
+        <device value="污水池、排污泵">
+            <checkpoint>液面、围埝、清砂、污水泵符合安全要求</checkpoint>
+        </device>
+
+        <device value="爬犁">
+            <checkpoint>物品摆放整齐</checkpoint>
+        </device>
+        <device value="消防房">
+            <checkpoint>消防器材种类、数量齐全，做到“三定一挂”管理</checkpoint>
+            <checkpoint>灭火器、消防钩、消防锹、消防斧、消防桶、消防水龙带齐全，工况良好，消防砂按规定配备</checkpoint>
+        </device>
+        <device value="器材">
+            <checkpoint>管架稳定好用，管架上管材码放不得超过三层，管架两端有挡销并且固定</checkpoint>
+            <checkpoint>钻具排列整齐、钻具上下钻台有护丝保护，丝扣清洁、防腐，水眼畅通</checkpoint>
+            <checkpoint>场地工具、用具齐全，摆放整齐，绳套符合安全标准</checkpoint>
+            <checkpoint>消防工具符合安全要求，摆放整齐，防火砂堆无他用现象</checkpoint>
+            <checkpoint>及时向司钻反映巡回检查中发现的未整改问题</checkpoint>
+        </device>
+        <device value="值班房">
+            <checkpoint>接受司钻的任务分工，明确本班本岗位操作的安全要求和设备保养内容</checkpoint>
+            <checkpoint>班后会：认真总结本班本岗位工作任务执行及完成情况</checkpoint>
+        </device>
+    </type>
+    <type value="机房">
+
+    </type>
+    <type value="司助">
+
+    </type>
+</resources>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="fragment_title">
+        <item>泥浆值班房</item>
+        <item>药品罐</item>
+        <item>除砂器</item>
+        <item>砂泵</item>
+        <item>搅拌器</item>
+        <item>离心机</item>
+        <item>泥浆循环罐</item>
+        <item>泥浆储备罐</item>
+        <item>工业水罐</item>
+        <item>混合漏斗</item>
+        <item>材料爬犁</item>
+        <item>坐岗房</item>
+        <item>泥浆材料房</item>
+        <item>值班房</item>
+    </string-array>
+
+    <string-array name="fragment_content">
+        <item>@array/fragment_泥浆值班房</item>
+        <item>@array/fragment_2_detail</item>
+        <item>@array/fragment_3_detail</item>
+        <item>@array/fragment_4_detail</item>
+        <item>@array/fragment_5_detail</item>
+        <item>@array/fragment_6_detail</item>
+        <item>@array/fragment_7_detail</item>
+        <item>@array/fragment_8_detail</item>
+        <item>@array/fragment_9_detail</item>
+        <item>@array/fragment_9_detail</item>
+        <item>@array/fragment_9_detail</item>
+        <item>@array/fragment_9_detail</item>
+        <item>@array/fragment_9_detail</item>
+        <item>@array/fragment_9_detail</item>
+    </string-array>
+
+    <string-array name="fragment_泥浆值班房">
+        <item>项目1</item>
+        <item>项目2</item>
+        <item>项目3</item>
+        <item>项目4</item>
+        <item>项目5</item>
+    </string-array>
+
+    <string-array name="fragment_2_detail">
+        <item>项目1</item>
+        <item>项目2</item>
+        <item>项目3</item>
+        <item>项目4</item>
+        <item>项目5</item>
+    </string-array>
+
+    <string-array name="fragment_3_detail">
+        <item>项目1</item>
+        <item>项目2</item>
+        <item>项目3</item>
+        <item>项目4</item>
+        <item>项目5</item>
+    </string-array>
+
+    <string-array name="fragment_4_detail">
+        <item>项目1</item>
+        <item>项目2</item>
+        <item>项目3</item>
+        <item>项目4</item>
+        <item>项目5</item>
+    </string-array>
+
+    <string-array name="fragment_5_detail">
+        <item>项目1</item>
+        <item>项目2</item>
+        <item>项目3</item>
+        <item>项目4</item>
+        <item>项目5</item>
+    </string-array>
+
+    <string-array name="fragment_6_detail">
+        <item>项目1</item>
+        <item>项目2</item>
+        <item>项目3</item>
+        <item>项目4</item>
+        <item>项目5</item>
+    </string-array>
+
+    <string-array name="fragment_7_detail">
+        <item>项目1</item>
+        <item>项目2</item>
+        <item>项目3</item>
+        <item>项目4</item>
+        <item>项目5</item>
+    </string-array>
+
+    <string-array name="fragment_8_detail">
+        <item>项目1</item>
+        <item>项目2</item>
+        <item>项目3</item>
+        <item>项目4</item>
+        <item>项目5</item>
+    </string-array>
+
+    <string-array name="fragment_9_detail">
+        <item>项目6</item>
+        <item>项目7</item>
+        <item>项目8</item>
+        <item>项目9</item>
+        <item>项目10</item>
+    </string-array>
+</resources>
