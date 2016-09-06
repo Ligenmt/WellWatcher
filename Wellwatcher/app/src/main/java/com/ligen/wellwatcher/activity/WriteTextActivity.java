@@ -9,12 +9,14 @@ import android.nfc.Tag;
 import android.nfc.tech.Ndef;
 import android.nfc.tech.NdefFormatable;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -75,6 +77,12 @@ public class WriteTextActivity extends AppCompatActivity {
                 mTvText.setText("巡检项目名为：" + text + "，请将标签靠近！");
                 mEtText.setText(text);
                 mEtText.setEnabled(false);
+                AlertDialog.Builder builder = new AlertDialog.Builder(WriteTextActivity.this);
+                View dialogView = View.inflate(WriteTextActivity.this, R.layout.dialog_nfc_image, null);
+                builder.setView(dialogView);
+
+                builder.show().setCanceledOnTouchOutside(false);
+                ImageView iv = (ImageView) dialogView.findViewById(R.id.iv_nfc);
             }
         });
 
@@ -105,6 +113,7 @@ public class WriteTextActivity extends AppCompatActivity {
         });
         if (writeMessageToNfc(message, tag)) {
             Toast.makeText(WriteTextActivity.this, "写入成功！", Toast.LENGTH_SHORT).show();
+
         }
     }
 

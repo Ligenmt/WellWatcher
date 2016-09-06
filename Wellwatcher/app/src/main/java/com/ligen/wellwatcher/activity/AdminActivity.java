@@ -84,7 +84,6 @@ public class AdminActivity extends AppCompatActivity implements NavigationView.O
             mFragments.add(fragment);
         }
 
-
         mViewPager = (ViewPager) findViewById(R.id.vp);
         adapter = new AdminDeviceFragmentAdapter(getSupportFragmentManager(), mTitles, mFragments);
         mViewPager.setAdapter(adapter);
@@ -209,19 +208,19 @@ public class AdminActivity extends AppCompatActivity implements NavigationView.O
         mDeviceToDelete = devices[0];
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("移除巡检点")
-                .setSingleChoiceItems(devices, 0, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        mDeviceToDelete = devices[which];
-                    }
-                }).setPositiveButton("确定", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
+            .setSingleChoiceItems(devices, 0, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    mDeviceToDelete = devices[which];
+                }
+            }).setPositiveButton("确定", new DialogInterface.OnClickListener() {
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
 
-                CheckInfoDao.getDao(AdminActivity.this).removeDevice(mDeviceToDelete);
-                Toast.makeText(AdminActivity.this, mDeviceToDelete + "已移除!", Toast.LENGTH_SHORT).show();
-                initFragment();
-                dialog.dismiss();
+            CheckInfoDao.getDao(AdminActivity.this).removeDevice(mDeviceToDelete);
+            Toast.makeText(AdminActivity.this, mDeviceToDelete + "已移除!", Toast.LENGTH_SHORT).show();
+            initFragment();
+            dialog.dismiss();
             }
         }).setNegativeButton("取消", new DialogInterface.OnClickListener() {
             @Override

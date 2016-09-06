@@ -181,6 +181,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         builder.setView(dialogView);
         final AlertDialog dialog = builder.create();
 
+        dialog.setCanceledOnTouchOutside(false);
         Spinner spinnerType = (Spinner) dialogView.findViewById(R.id.spinner_type);
 
         typeList = CheckInfoDao.getDao(this).getAllTypes();
