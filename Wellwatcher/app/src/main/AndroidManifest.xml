@@ -43,7 +43,7 @@
             android:name=".activity.WorkerActivity"
             android:screenOrientation="portrait" />
         <activity android:name=".activity.CheckpointActivity" />
-        <activity android:name=".activity.NfcReadV2Activity"
+        <activity android:name=".activity.NfcReadActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.nfc.action.NDEF_DISCOVERED" />

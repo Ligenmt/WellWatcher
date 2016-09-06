@@ -52,6 +52,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             }
         }
 
+
         initViews();
         //加载注册用户
         initUser();

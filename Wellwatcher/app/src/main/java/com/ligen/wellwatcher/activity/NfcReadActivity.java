@@ -32,7 +32,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class NfcReadV2Activity extends AppCompatActivity implements View.OnClickListener {
+public class NfcReadActivity extends AppCompatActivity implements View.OnClickListener {
 
     private String mCurrentUser;
     private String mCurrentType;
@@ -61,7 +61,7 @@ public class NfcReadV2Activity extends AppCompatActivity implements View.OnClick
         initAnimations();
 
         if (mCurrentUser == null || mCurrentType == null) {
-            Toast.makeText(NfcReadV2Activity.this, "您还未登录!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(NfcReadActivity.this, "您还未登录!", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(this, LoginActivity.class));
             finish();
             return;
@@ -77,7 +77,7 @@ public class NfcReadV2Activity extends AppCompatActivity implements View.OnClick
             }
         }
         if (!deviceExists) {
-            Toast.makeText(NfcReadV2Activity.this, "未查询到巡检地", Toast.LENGTH_SHORT).show();
+            Toast.makeText(NfcReadActivity.this, "未查询到巡检地", Toast.LENGTH_SHORT).show();
 //            Button btn = (Button) findViewById(R.id.btn_submit);
 //            btn.setText("退出");
 //            btn.setOnClickListener(new View.OnClickListener() {
@@ -104,7 +104,7 @@ public class NfcReadV2Activity extends AppCompatActivity implements View.OnClick
         mCheckpointRecordList = new ArrayList<>();
         mCheckpointList = CheckInfoDao.getDao(this).getCheckpoint(mDevicename);
         if(mCheckpointList.size() == 0) {
-            Toast.makeText(NfcReadV2Activity.this, "未找到巡检点信息", Toast.LENGTH_SHORT).show();
+            Toast.makeText(NfcReadActivity.this, "未找到巡检点信息", Toast.LENGTH_SHORT).show();
             return;
         }
         checkpointCount = mCheckpointList.size();
@@ -190,12 +190,12 @@ public class NfcReadV2Activity extends AppCompatActivity implements View.OnClick
                                     if(cr.getState() != 1) {
                                         hasError = 2;
                                     }
-                                    CheckRecordDao.getDao(NfcReadV2Activity.this).saveCheckRecord(cr.getUsername(), cr.getDeivce(), cr.getCheckpoint(), cr.getState());
+                                    CheckRecordDao.getDao(NfcReadActivity.this).saveCheckRecord(cr.getUsername(), cr.getDeivce(), cr.getCheckpoint(), cr.getState());
                                 }
-                                CheckRecordDao.getDao(NfcReadV2Activity.this).saveCheckDevice(mCurrentUser, mDevicename, hasError, new Date());
+                                CheckRecordDao.getDao(NfcReadActivity.this).saveCheckDevice(mCurrentUser, mDevicename, hasError, new Date());
 
                                 mTvCheckpoint.setText("巡检完成");
-                                Toast.makeText(NfcReadV2Activity.this, "巡检完成", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(NfcReadActivity.this, "巡检完成", Toast.LENGTH_SHORT).show();
                                 finish();
                             }
                         }
@@ -232,12 +232,12 @@ public class NfcReadV2Activity extends AppCompatActivity implements View.OnClick
                                     if(cr.getState() != 1) {
                                         hasError = 2;
                                     }
-                                    CheckRecordDao.getDao(NfcReadV2Activity.this).saveCheckRecord(cr.getUsername(), cr.getDeivce(), cr.getCheckpoint(), cr.getState());
+                                    CheckRecordDao.getDao(NfcReadActivity.this).saveCheckRecord(cr.getUsername(), cr.getDeivce(), cr.getCheckpoint(), cr.getState());
                                 }
-                                CheckRecordDao.getDao(NfcReadV2Activity.this).saveCheckDevice(mCurrentUser, mDevicename, hasError, new Date());
+                                CheckRecordDao.getDao(NfcReadActivity.this).saveCheckDevice(mCurrentUser, mDevicename, hasError, new Date());
 
                                 mTvCheckpoint.setText("巡检完成");
-                                Toast.makeText(NfcReadV2Activity.this, "巡检完成", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(NfcReadActivity.this, "巡检完成", Toast.LENGTH_SHORT).show();
                                 finish();
                             }
                         }
