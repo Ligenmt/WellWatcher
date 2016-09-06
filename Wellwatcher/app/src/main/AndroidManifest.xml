@@ -41,6 +41,7 @@
 
         <activity
             android:name=".activity.WorkerActivity"
+            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity android:name=".activity.CheckpointActivity" />
         <activity android:name=".activity.NfcReadActivity"

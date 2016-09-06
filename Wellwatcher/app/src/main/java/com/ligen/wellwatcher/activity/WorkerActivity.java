@@ -29,16 +29,23 @@ public class WorkerActivity extends AppCompatActivity {
 
     private static final String TAG = "WorkerActivity";
     public static String currentUser;
+    String currentType;
+
     private CheckInfoDao dao;
 
     private ListView mLvDevice;
+
+    List<String> mDevicesList;
+    List<DeviceRecord> mRecordDevices;
+    WorkerDeviceAdapter mAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_worker);
 
         currentUser = SharePrerenceUtil.getCurrentUser(this);
-        String type = SharePrerenceUtil.getCurrentType(this);
+        currentType = SharePrerenceUtil.getCurrentType(this);
 
         getSupportActionBar().setTitle("巡检人:" + currentUser);
         if (currentUser == null) {
@@ -48,10 +55,20 @@ public class WorkerActivity extends AppCompatActivity {
         }
         dao = CheckInfoDao.getDao(this);
         mLvDevice = (ListView) findViewById(R.id.lv_device);
-        List<String> devicesList = dao.getDevicesByType(type);
-        List<DeviceRecord> recordDevices = CheckRecordDao.getDao(this).getAllRecordDevicesByUsername(currentUser);
-        mLvDevice.setAdapter(new WorkerDeviceAdapter(this, devicesList, recordDevices));
+        mDevicesList = dao.getDevicesByType(currentType);
+        mRecordDevices = CheckRecordDao.getDao(this).getAllRecordDevicesByUsername(currentUser);
+        mAdapter = new WorkerDeviceAdapter(this, mDevicesList, mRecordDevices);
+        mLvDevice.setAdapter(mAdapter);
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mDevicesList = dao.getDevicesByType(currentType);
+        mRecordDevices = CheckRecordDao.getDao(this).getAllRecordDevicesByUsername(currentUser);
+        mAdapter = new WorkerDeviceAdapter(this, mDevicesList, mRecordDevices);
+        mLvDevice.setAdapter(mAdapter);
     }
 
     @Override
