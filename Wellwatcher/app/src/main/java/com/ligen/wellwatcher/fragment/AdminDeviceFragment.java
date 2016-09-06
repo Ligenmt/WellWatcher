@@ -40,7 +40,7 @@ public class AdminDeviceFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         mView = inflater.inflate(R.layout.fragment_watcher, container, false);
         TextView tv = (TextView) mView.findViewById(R.id.tv);
-        tv.setText(mTitle);
+        tv.setText(mTitle + "巡检路线");
         mRvDetail = (RecyclerView) mView.findViewById(R.id.rv_checkpoints);
         mRvDetail.setLayoutManager(new LinearLayoutManager(getContext()));
         mRvDetail.setAdapter(new DetailAdapter());

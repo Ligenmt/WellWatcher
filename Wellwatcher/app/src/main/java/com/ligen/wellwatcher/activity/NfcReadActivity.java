@@ -1,5 +1,9 @@
 package com.ligen.wellwatcher.activity;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -10,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
+import android.view.animation.LinearInterpolator;
 import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -118,21 +123,28 @@ public class NfcReadActivity extends AppCompatActivity implements View.OnClickLi
     TranslateAnimation ta2;
 
     private void initAnimations() {
-        as = new AnimationSet(true);
-        ta1 = new TranslateAnimation(
-                Animation.RELATIVE_TO_SELF, 0f,
-                Animation.RELATIVE_TO_SELF, 1.0f,
-                Animation.RELATIVE_TO_SELF, 0f,
-                Animation.RELATIVE_TO_SELF, 0f);
-        ta1.setDuration(1000);
-        ta2 = new TranslateAnimation(
-                Animation.RELATIVE_TO_SELF, 1.0f,
-                Animation.RELATIVE_TO_SELF, 0f,
-                Animation.RELATIVE_TO_SELF, 0f,
-                Animation.RELATIVE_TO_SELF, 0f);
-        ta2.setDuration(1000);
-        as.addAnimation(ta1);
-        as.addAnimation(ta2);
+
+        ObjectAnimator transX1 = ObjectAnimator.ofFloat(mLlCheckpoint, "translationX", 0, 51000f);
+        transX1.setDuration(1000);
+        ObjectAnimator transX2 = ObjectAnimator.ofFloat(mLlCheckpoint, "translationX", 5000f, 0f);
+        transX2.setDuration(1000);
+
+        transX1.addListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                Toast.makeText(NfcReadActivity.this, "1", Toast.LENGTH_SHORT).show();
+            }
+        });
+        transX2.addListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                Toast.makeText(NfcReadActivity.this, "2", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        AnimatorSet animatorSet = new AnimatorSet();
+        animatorSet.setInterpolator(new LinearInterpolator());
+        animatorSet.playSequentially(transX1, transX2);
     }
 
 
@@ -283,10 +295,6 @@ public class NfcReadActivity extends AppCompatActivity implements View.OnClickLi
         intent.putExtra("return-data", true);
         startActivityForResult(intent, REQUEST_CAMERA);
     }
-
-
-
-
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
