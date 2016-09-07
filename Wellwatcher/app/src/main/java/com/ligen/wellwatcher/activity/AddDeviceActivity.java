@@ -88,7 +88,7 @@ public class AddDeviceActivity extends AppCompatActivity {
             TextInputLayout til = (TextInputLayout) mLlCheckpoint.getChildAt(i);
             EditText et = til.getEditText();
             String checkpoint = et.getText().toString();
-            dao.addCheckpoint(checkpoint, devicename);
+            dao.addCheckpoint(checkpoint, devicename, type);
         }
         Toast.makeText(AddDeviceActivity.this, "添加成功", Toast.LENGTH_SHORT).show();
 

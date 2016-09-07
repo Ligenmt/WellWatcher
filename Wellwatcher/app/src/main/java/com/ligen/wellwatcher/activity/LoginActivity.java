@@ -245,7 +245,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         int eventType = parser.getEventType();
         parser.getAttributeCount();
 
-        String[] list = getResources().getAssets().list("/");
+
 
         String currentType = null;
         String currentDevice = null;
@@ -267,7 +267,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     }
                     if(name.equals("checkpoint")) {
                         String checkpoint = parser.nextText();
-                        CheckInfoDao.getDao(this).addCheckpoint(checkpoint, currentDevice);
+                        CheckInfoDao.getDao(this).addCheckpoint(checkpoint, currentDevice, currentType);
                     }
                     break;
 
@@ -279,81 +279,5 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         UserDao.getDao(this).addUser("ADMIN", "123", null);
         SharePrerenceUtil.setUrl(LoginActivity.this, "http://120.25.244.188/crawler/receive/drilling");
 
-//        CheckInfoDao.getDao(this).addType("泥浆工");
-//
-//        CheckInfoDao.getDao(this).addDevice("泥浆值班房", "泥浆工");
-//        CheckInfoDao.getDao(this).addCheckpoint("旋转粘度计", "泥浆值班房");
-//        CheckInfoDao.getDao(this).addCheckpoint("用水", "泥浆值班房");
-//        CheckInfoDao.getDao(this).addCheckpoint("接地", "泥浆值班房");
-//
-//        CheckInfoDao.getDao(this).addDevice("药品罐", "泥浆工");
-//        CheckInfoDao.getDao(this).addCheckpoint("罐面清洁", "药品罐");
-//        CheckInfoDao.getDao(this).addCheckpoint("闸门", "药品罐");
-//        CheckInfoDao.getDao(this).addCheckpoint("搅拌器接线", "药品罐");
-//
-//        CheckInfoDao.getDao(this).addDevice("除砂器", "泥浆工");
-//        CheckInfoDao.getDao(this).addCheckpoint("固定牢靠", "除砂器");
-//        CheckInfoDao.getDao(this).addCheckpoint("设备润滑", "除砂器");
-//        CheckInfoDao.getDao(this).addCheckpoint("护罩齐全", "除砂器");
-//        CheckInfoDao.getDao(this).addCheckpoint("筛布筛框", "除砂器");
-//        CheckInfoDao.getDao(this).addCheckpoint("电机", "除砂器");
-//        CheckInfoDao.getDao(this).addCheckpoint("漏斗", "除砂器");
-//        CheckInfoDao.getDao(this).addCheckpoint("管线", "除砂器");
-//
-//        CheckInfoDao.getDao(this).addDevice("砂泵", "泥浆工");
-//        CheckInfoDao.getDao(this).addCheckpoint("罐面清洁", "砂泵");
-//        CheckInfoDao.getDao(this).addCheckpoint("闸门", "砂泵");
-//        CheckInfoDao.getDao(this).addCheckpoint("搅拌器接线", "砂泵");
-//
-//        CheckInfoDao.getDao(this).addDevice("搅拌器", "泥浆工");
-//        CheckInfoDao.getDao(this).addCheckpoint("固定牢靠", "搅拌器");
-//        CheckInfoDao.getDao(this).addCheckpoint("润滑清洁", "搅拌器");
-//        CheckInfoDao.getDao(this).addCheckpoint("护罩齐全", "搅拌器");
-//        CheckInfoDao.getDao(this).addCheckpoint("电机", "搅拌器");
-//        CheckInfoDao.getDao(this).addCheckpoint("搅拌器叶轮", "搅拌器");
-//
-//        CheckInfoDao.getDao(this).addDevice("离心机", "泥浆工");
-//        CheckInfoDao.getDao(this).addCheckpoint("润滑清洁", "离心机");
-//        CheckInfoDao.getDao(this).addCheckpoint("电机", "离心机");
-//        CheckInfoDao.getDao(this).addCheckpoint("供液泵", "离心机");
-//        CheckInfoDao.getDao(this).addCheckpoint("管线", "离心机");
-//
-//        CheckInfoDao.getDao(this).addDevice("泥浆循环罐", "泥浆工");
-//        CheckInfoDao.getDao(this).addCheckpoint("梯子牢靠", "泥浆循环罐");
-//        CheckInfoDao.getDao(this).addCheckpoint("护栏", "泥浆循环罐");
-//        CheckInfoDao.getDao(this).addCheckpoint("罐面", "泥浆循环罐");
-//        CheckInfoDao.getDao(this).addCheckpoint("泥浆量", "泥浆循环罐");
-//        CheckInfoDao.getDao(this).addCheckpoint("液面报警器", "泥浆循环罐");
-//
-//        CheckInfoDao.getDao(this).addDevice("泥浆储备罐", "泥浆工");
-//        CheckInfoDao.getDao(this).addCheckpoint("梯子牢靠", "泥浆储备罐");
-//        CheckInfoDao.getDao(this).addCheckpoint("护栏", "泥浆储备罐");
-//        CheckInfoDao.getDao(this).addCheckpoint("罐面", "泥浆储备罐");
-//        CheckInfoDao.getDao(this).addCheckpoint("储备浆", "泥浆储备罐");
-//        CheckInfoDao.getDao(this).addCheckpoint("管线", "泥浆储备罐");
-//        CheckInfoDao.getDao(this).addCheckpoint("电源开关", "泥浆储备罐");
-//        CheckInfoDao.getDao(this).addCheckpoint("药品罐", "泥浆储备罐");
-//
-//        CheckInfoDao.getDao(this).addDevice("工业水罐", "泥浆工");
-//        CheckInfoDao.getDao(this).addCheckpoint("梯子牢靠", "工业水罐");
-//
-//        CheckInfoDao.getDao(this).addDevice("混合漏斗", "泥浆工");
-//        CheckInfoDao.getDao(this).addCheckpoint("漏斗完好", "混合漏斗");
-//        CheckInfoDao.getDao(this).addCheckpoint("整洁干净", "混合漏斗");
-//
-//        CheckInfoDao.getDao(this).addDevice("材料爬犁", "泥浆工");
-//        CheckInfoDao.getDao(this).addCheckpoint("处理剂", "材料爬犁");
-//
-//        CheckInfoDao.getDao(this).addDevice("坐岗房", "泥浆工");
-//        CheckInfoDao.getDao(this).addCheckpoint("记录齐全", "坐岗房");
-//        CheckInfoDao.getDao(this).addCheckpoint("量具齐全", "坐岗房");
-//        CheckInfoDao.getDao(this).addCheckpoint("卫生整洁", "坐岗房");
-//
-//        CheckInfoDao.getDao(this).addDevice("泥浆材料房", "泥浆工");
-//        CheckInfoDao.getDao(this).addCheckpoint("处理剂", "泥浆材料房");
-//        CheckInfoDao.getDao(this).addCheckpoint("门上通风", "泥浆材料房");
-//        CheckInfoDao.getDao(this).addCheckpoint("整洁卫生", "泥浆材料房");
-        
-        
     }
 }

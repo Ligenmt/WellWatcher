@@ -30,15 +30,15 @@ public class CheckInfoDao {
         helper = new CheckpointDaoHelper(context);
     }
 
-    public void addCheckpoint(String checkpoint, String deviceName) {
+    public void addCheckpoint(String checkpoint, String deviceName, String type) {
         SQLiteDatabase db = helper.getWritableDatabase();
-        db.execSQL("insert into checkpoint(checkpoint, devicename) values(?, ?)", new Object[]{checkpoint, deviceName});
+        db.execSQL("insert into checkpoint(checkpoint, devicename, type) values(?, ?, ?)", new Object[]{checkpoint, deviceName, type});
         db.close();
     }
 
-    public List<Checkpoint> getCheckpoint(String devicename) {
+    public List<Checkpoint> getCheckpoint(String devicename, String type) {
         SQLiteDatabase db = helper.getWritableDatabase();
-        Cursor cursor = db.rawQuery("select checkpoint, checkorder, devicename from checkpoint where devicename=? order by checkorder", new String[]{devicename});
+        Cursor cursor = db.rawQuery("select checkpoint, checkorder, devicename from checkpoint where devicename=? and type=? order by checkorder", new String[]{devicename, type});
         List<Checkpoint> list = new ArrayList<>();
         while (cursor.moveToNext()) {
             String checkpoint = cursor.getString(0);

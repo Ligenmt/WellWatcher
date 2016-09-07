@@ -2,138 +2,150 @@
 <resources value="init">
     <type value="泥浆工">
         <device value="泥浆值班房">
-            <checkpoint>旋转粘度计</checkpoint>
-            <checkpoint>用水</checkpoint>
-            <checkpoint>接地</checkpoint>
+            <checkpoint>旋转粘度计无异常声响</checkpoint>
+            <checkpoint>其它测量仪器灵敏准确、按规定保养、摆放整齐</checkpoint>
+            <checkpoint>特殊劳保用品齐全、无损伤</checkpoint>
+            <checkpoint>洗仪器用水清洁</checkpoint>
+            <checkpoint>地板卫生干净</checkpoint>
+            <checkpoint>接地保护完好有效</checkpoint>
         </device>
         <device value="药品罐">
-            <checkpoint>罐面清洁</checkpoint>
-            <checkpoint>闸门</checkpoint>
-            <checkpoint>搅拌器接线</checkpoint>
+            <checkpoint>罐面清洁、无杂物</checkpoint>
+            <checkpoint>闸门灵活好用</checkpoint>
+            <checkpoint>搅拌器接线防爆，运转正常</checkpoint>
         </device>
         <device value="除砂器">
-            <checkpoint>固定牢靠</checkpoint>
-            <checkpoint>设备润滑</checkpoint>
-            <checkpoint>护罩齐全</checkpoint>
-            <checkpoint>筛布筛框</checkpoint>
-            <checkpoint>电机</checkpoint>
-            <checkpoint>漏斗</checkpoint>
-            <checkpoint>管线</checkpoint>
+            <checkpoint>检查除砂器固定牢靠，无捆绑现象</checkpoint>
+            <checkpoint>设备润滑、清洁及工况良好</checkpoint>
+            <checkpoint>护罩齐全牢靠，有防污挡板，出砂处应有倒砂槽，对应罐体上加有导砂轨道</checkpoint>
+            <checkpoint>筛布使用符合要求，无破损、筛框固定牢固</checkpoint>
+            <checkpoint>电机运转平稳、无噪音、固定牢靠，电缆无破损老化，控制开关完好好用，压力表完好、准确</checkpoint>
+            <checkpoint>漏斗完好、齐全，连接紧密，无刺漏现象</checkpoint>
+            <checkpoint>进、排液管线连接牢靠，密封良好，不刺漏</checkpoint>
         </device>
         <device value="砂泵">
-            <checkpoint>罐面清洁</checkpoint>
-            <checkpoint>闸门</checkpoint>
-            <checkpoint>搅拌器接线</checkpoint>
+            <checkpoint>砂泵齐全、完好，紧固可靠</checkpoint>
+            <checkpoint>砂泵润滑良好、及时，工况良好</checkpoint>
         </device>
         <device value="搅拌器">
-            <checkpoint>固定牢靠</checkpoint>
-            <checkpoint>润滑清洁</checkpoint>
-            <checkpoint>护罩齐全</checkpoint>
-            <checkpoint>电机</checkpoint>
-            <checkpoint>搅拌器叶轮</checkpoint>
+            <checkpoint>搅拌器固定牢靠，无捆绑现象</checkpoint>
+            <checkpoint>设备润滑、清洁及工况良好</checkpoint>
+            <checkpoint>护罩齐全牢靠</checkpoint>
+            <checkpoint>电机转向正确、运转平稳、无噪音，电缆无破损老化，控制开关完好好用</checkpoint>
+            <checkpoint>搅拌器叶轮连接、运转可靠，工况良好</checkpoint>
         </device>
         <device value="离心机">
-            <checkpoint>润滑清洁</checkpoint>
-            <checkpoint>电机</checkpoint>
-            <checkpoint>供液泵</checkpoint>
-            <checkpoint>管线</checkpoint>
+            <checkpoint>离心机固定牢靠，无捆绑现象</checkpoint>
+            <checkpoint>设备润滑、清洁及工况良好，护罩齐全牢靠，有防污挡板，出砂处应有倒砂槽，对应罐体上加有导砂轨道</checkpoint>
+            <checkpoint>大、小电机转向正确、运转平稳、无噪音，电缆无破损老化，控制开关完好好用</checkpoint>
+            <checkpoint>供液泵完好，电缆无破损老化，控制开关完好好用，与离心机连接管线连接紧密、不渗漏</checkpoint>
+            <checkpoint>进、排液管线连接牢靠，密封良好，不刺漏</checkpoint>
         </device>
         <device value="泥浆循环罐">
-            <checkpoint>梯子牢靠</checkpoint>
-            <checkpoint>护栏</checkpoint>
-            <checkpoint>罐面</checkpoint>
-            <checkpoint>储备浆</checkpoint>
-            <checkpoint>管线</checkpoint>
-            <checkpoint>电源开关</checkpoint>
-            <checkpoint>药品罐</checkpoint>
+            <checkpoint>护栏齐全牢固、无缺损</checkpoint>
+            <checkpoint>梯子牢固可靠、焊接点无开焊</checkpoint>
+            <checkpoint>罐面无破损处</checkpoint>
+            <checkpoint>储备浆数量、质量符合设计要求</checkpoint>
+            <checkpoint>管线无破损</checkpoint>
+            <checkpoint>搅拌机、打药泵的电源线无老化破损，电源开关护罩齐全</checkpoint>
+            <checkpoint>药品罐整洁卫生</checkpoint>
         </device>
         <device value="工业水罐">
-            <checkpoint>梯子牢靠</checkpoint>
+            <checkpoint>罐体完整、清洁，无裂缝、开焊，罐面平整、无锈蚀、破损</checkpoint>
         </device>
         <device value="混合漏斗">
-            <checkpoint>漏斗完好</checkpoint>
-            <checkpoint>整洁干净</checkpoint>
+            <checkpoint>漏斗完好、无堵塞</checkpoint>
+            <checkpoint>整洁、干净</checkpoint>
         </device>
         <device value="材料爬犁">
-            <checkpoint>处理剂</checkpoint>
+            <checkpoint>处理剂上盖严实</checkpoint>
+            <checkpoint>处理剂码放整齐、堆垛稳固、无散落</checkpoint>
         </device>
         <device value="坐岗房">
-            <checkpoint>记录齐全</checkpoint>
-            <checkpoint>量具齐全</checkpoint>
-            <checkpoint>卫生整洁</checkpoint>
+            <checkpoint>坐岗记录齐全、清洁、准确</checkpoint>
+            <checkpoint>量具齐全、完好</checkpoint>
+            <checkpoint>房内外设施、卫生整洁</checkpoint>
         </device>
         <device value="泥浆材料房">
-            <checkpoint>处理剂</checkpoint>
-            <checkpoint>门上通风</checkpoint>
-            <checkpoint>整洁卫生</checkpoint>
+            <checkpoint>处理剂码放整齐、堆垛稳固、无散落</checkpoint>
+            <checkpoint>门上有通风标志</checkpoint>
+            <checkpoint>地板整洁、卫生</checkpoint>
+        </device>
+        <device value="值班房">
+            <checkpoint>及时向司钻反映巡回检查中发现的未整改问题</checkpoint>
+            <checkpoint>接受司钻的任务分工，明确本班本岗位操作的安全要求和设备保养内容</checkpoint>
+            <checkpoint>认真总结本班本岗位工作任务执行及完成情况</checkpoint>
         </device>
     </type>
 
     <type value="副司钻">
-        <device value="值班房">
-            <checkpoint>旋转粘度计</checkpoint>
-            <checkpoint>用水</checkpoint>
-            <checkpoint>接地</checkpoint>
+        <device value="值班房检查">
+            <checkpoint>查看工程班报表，了解施工情况，钻井液性能、钻井液提示记录符合设计要求</checkpoint>
+            <checkpoint>查看井控记录、钻井泵运转、保养记录的填写是否准确、及时</checkpoint>
         </device>
         <device value="循环罐">
-            <checkpoint>旋转粘度计</checkpoint>
-            <checkpoint>用水</checkpoint>
-            <checkpoint>接地</checkpoint>
+            <checkpoint>钻井液液面高度正常</checkpoint>
+            <checkpoint>闸门开关情况</checkpoint>
         </device>
         <device value="储备罐">
-            <checkpoint>旋转粘度计</checkpoint>
-            <checkpoint>用水</checkpoint>
-            <checkpoint>接地</checkpoint>
+            <checkpoint>钻井液(或清水）符合施工设计要求</checkpoint>
         </device>
-        <device value="值班房">
-            <checkpoint>旋转粘度计</checkpoint>
-            <checkpoint>用水</checkpoint>
-            <checkpoint>接地</checkpoint>
-        </device>
+
         <device value="钻井泵">
-            <checkpoint>旋转粘度计</checkpoint>
-            <checkpoint>用水</checkpoint>
-            <checkpoint>接地</checkpoint>
+            <checkpoint>运转无杂音，无跳动，无发烧</checkpoint>
+            <checkpoint>泵压表清洁、灵敏、读数准确，数据正常</checkpoint>
+            <checkpoint>润滑良好，油量、油质符合要求（按标准用油）</checkpoint>
+            <checkpoint>各连接螺栓齐全、紧固、不松、不刺、不漏</checkpoint>
+            <checkpoint>缸套、活塞润滑及冷却良好，拉杆箱内清洁无杂物</checkpoint>
+            <checkpoint>上水管线用卡箍紧固，封闭良好，不漏钻井液</checkpoint>
+            <checkpoint>缸套、活塞总成、阀体总成工作正常，不刺漏</checkpoint>
+            <checkpoint>安全销定位符合规定、定期维护保养安全阀溢流口排出管线固定牢固并加保险绳或保险链</checkpoint>
+            <checkpoint>空气包充气（氮气或空气）压力为施工泵压的30%～40%</checkpoint>
+            <checkpoint>喷淋泵运转正常，皮带齐全、松紧合适、护罩齐全</checkpoint>
+            <checkpoint>牢固，不漏水，冷却水箱水质清洁，满足润滑冷却要求</checkpoint>
+            <checkpoint>泄压管固定牢靠，传动皮带齐全、松紧合适，护罩固定牢靠</checkpoint>
+            <checkpoint>机油泵工作油压正常（0.2～0.5MP）</checkpoint>
         </device>
         <device value="工具箱">
-            <checkpoint>旋转粘度计</checkpoint>
-            <checkpoint>用水</checkpoint>
-            <checkpoint>接地</checkpoint>
+            <checkpoint>阀座取出器、管钳、撬杠、挪头、拉缸器等工具齐全、完好、清洁</checkpoint>
+            <checkpoint>备有适量的易损件</checkpoint>
         </device>
         <device value="高压管汇">
-            <checkpoint>旋转粘度计</checkpoint>
-            <checkpoint>用水</checkpoint>
+            <checkpoint>闸门齐全、完好，开关灵活，管汇固定牢靠</checkpoint>
+            <checkpoint>法兰、活接头连接紧密、无刺漏、固定牢靠：高压软管缠绕直径为12.7mm钢丝保险绳或保险链，两头固定牢靠</checkpoint>
             <checkpoint>接地</checkpoint>
         </device>
         <device value="节流管汇">
-            <checkpoint>旋转粘度计</checkpoint>
-            <checkpoint>用水</checkpoint>
-            <checkpoint>接地</checkpoint>
+            <checkpoint>闸门齐全、完好，开关灵活，管汇固定牢靠</checkpoint>
+            <checkpoint>套压表灵敏、清洁、方向正确</checkpoint>
         </device>
         <device value="液气分离器">
-            <checkpoint>旋转粘度计</checkpoint>
-            <checkpoint>用水</checkpoint>
-            <checkpoint>接地</checkpoint>
+            <checkpoint>管线连接固定牢靠</checkpoint>
+            <checkpoint>工作时罐中压力保持在0.7MPa，压力表灵敏、准确</checkpoint>
+            <checkpoint>闸门转动灵活</checkpoint>
         </device>
         <device value="防喷器">
-            <checkpoint>旋转粘度计</checkpoint>
-            <checkpoint>用水</checkpoint>
-            <checkpoint>接地</checkpoint>
+            <checkpoint>螺栓齐全、紧固、清洁、无刺漏</checkpoint>
+            <checkpoint>防喷器四通两翼闸门齐全、完好、灵活，开关状态、位置正确</checkpoint>
+            <checkpoint>防喷器控制管线活接头连接紧密</checkpoint>
         </device>
         <device value="压井管汇">
-            <checkpoint>旋转粘度计</checkpoint>
-            <checkpoint>用水</checkpoint>
-            <checkpoint>接地</checkpoint>
+            <checkpoint>闸门齐全、完好，开关灵活，管汇安装符合要求</checkpoint>
+            <checkpoint>压力表符合要求，单流阀完好</checkpoint>
+            <checkpoint>回收管线、液气分离器连接活接头紧固</checkpoint>
         </device>
         <device value="远程控制台">
-            <checkpoint>旋转粘度计</checkpoint>
-            <checkpoint>用水</checkpoint>
-            <checkpoint>接地</checkpoint>
+            <checkpoint>液压管线连接完好，活接头连接紧密、无刺漏</checkpoint>
+            <checkpoint>压力表显示符合要求</checkpoint>
+            <checkpoint>打压后油量高于下部油标上限</checkpoint>
+            <checkpoint>电源开关处于接通状态，电控箱旋钮在自动位</checkpoint>
+            <checkpoint>电、气打压泵运转正常</checkpoint>
         </device>
         <device value="测斜房">
-            <checkpoint>旋转粘度计</checkpoint>
-            <checkpoint>用水</checkpoint>
-            <checkpoint>接地</checkpoint>
+            <checkpoint>钢丝绳排列整齐、无死折</checkpoint>
+            <checkpoint>计数器准确</checkpoint>
+            <checkpoint>控速器灵敏，刹车可靠，滚筒保养良好</checkpoint>
+            <checkpoint>电动机运转正常，接地良好</checkpoint>
         </device>
     </type>
 
@@ -181,30 +193,6 @@
             <checkpoint>放下重锤，检查进气情况是否良好</checkpoint>
             <checkpoint>数码防碰屏显清晰，数字准确，报警灵敏</checkpoint>
             <checkpoint>防碰天车挡绳距天车滑轮应大于4m</checkpoint>
-        </device>
-        <device value="司钻井控操作台">
-            <checkpoint>仪表齐全、完好、准确</checkpoint>
-            <checkpoint>气源压力符合要求（0.65-0.8MPa）</checkpoint>
-            <checkpoint>气控阀手柄齐全、工作正常，各连接管线和接头无泄露</checkpoint>
-            <checkpoint>无障碍物，操作方便</checkpoint>
-        </device>
-        <device value="司钻井控操作台">
-            <checkpoint>仪表齐全、完好、准确</checkpoint>
-            <checkpoint>气源压力符合要求（0.65-0.8MPa）</checkpoint>
-            <checkpoint>气控阀手柄齐全、工作正常，各连接管线和接头无泄露</checkpoint>
-            <checkpoint>无障碍物，操作方便</checkpoint>
-        </device>
-        <device value="司钻井控操作台">
-            <checkpoint>仪表齐全、完好、准确</checkpoint>
-            <checkpoint>气源压力符合要求（0.65-0.8MPa）</checkpoint>
-            <checkpoint>气控阀手柄齐全、工作正常，各连接管线和接头无泄露</checkpoint>
-            <checkpoint>无障碍物，操作方便</checkpoint>
-        </device>
-        <device value="司钻井控操作台">
-            <checkpoint>仪表齐全、完好、准确</checkpoint>
-            <checkpoint>气源压力符合要求（0.65-0.8MPa）</checkpoint>
-            <checkpoint>气控阀手柄齐全、工作正常，各连接管线和接头无泄露</checkpoint>
-            <checkpoint>无障碍物，操作方便</checkpoint>
         </device>
         <device value="司钻井控操作台">
             <checkpoint>仪表齐全、完好、准确</checkpoint>

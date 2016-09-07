@@ -12,10 +12,7 @@ import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationSet;
 import android.view.animation.LinearInterpolator;
-import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -58,7 +55,7 @@ public class NfcReadActivity extends AppCompatActivity implements View.OnClickLi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nfc_read_v2);
+        setContentView(R.layout.activity_nfc_read);
         mCurrentUser = SharePrerenceUtil.getCurrentUser(this);
         mCurrentType = SharePrerenceUtil.getCurrentType(this);
 
@@ -107,7 +104,7 @@ public class NfcReadActivity extends AppCompatActivity implements View.OnClickLi
 
         //显示第一个巡检点
         mCheckpointRecordList = new ArrayList<>();
-        mCheckpointList = CheckInfoDao.getDao(this).getCheckpoint(mDevicename);
+        mCheckpointList = CheckInfoDao.getDao(this).getCheckpoint(mDevicename, mCurrentType);
         if(mCheckpointList.size() == 0) {
             Toast.makeText(NfcReadActivity.this, "未找到巡检点信息", Toast.LENGTH_SHORT).show();
             return;
@@ -201,6 +198,7 @@ public class NfcReadActivity extends AppCompatActivity implements View.OnClickLi
                 });
                 animatorSet.start();
                 mBtnNext.setText("无异常，下一项");
+                mBtnCamera.setText("有异常");
 
                 break;
 
@@ -254,7 +252,8 @@ public class NfcReadActivity extends AppCompatActivity implements View.OnClickLi
 //                //裁剪图片
 //
 //            }
-            mBtnCamera.setText("保存，下一项");
+            mBtnCamera.setText("重新拍照");
+            mBtnNext.setText("保存，下一项");
         }
 
     }

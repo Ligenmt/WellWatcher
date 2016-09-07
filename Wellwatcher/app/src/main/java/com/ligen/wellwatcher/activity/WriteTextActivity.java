@@ -41,8 +41,7 @@ public class WriteTextActivity extends AppCompatActivity {
     private TextView mTvText;
 
     private String mText;
-
-    private CheckInfoDao dao;
+    AlertDialog dialog;
 
     /**
      * @param savedInstanceState
@@ -55,7 +54,6 @@ public class WriteTextActivity extends AppCompatActivity {
         mNfcAdapter = NfcAdapter.getDefaultAdapter(this);
         mPeningIntent = PendingIntent.getActivity(this, 0, new Intent(this, getClass()), 0);
 
-        dao = CheckInfoDao.getDao(this);
         if (mNfcAdapter == null) {
             finish();
         }
@@ -80,9 +78,15 @@ public class WriteTextActivity extends AppCompatActivity {
                 AlertDialog.Builder builder = new AlertDialog.Builder(WriteTextActivity.this);
                 View dialogView = View.inflate(WriteTextActivity.this, R.layout.dialog_nfc_image, null);
                 builder.setView(dialogView);
-
-                builder.show().setCanceledOnTouchOutside(false);
-                ImageView iv = (ImageView) dialogView.findViewById(R.id.iv_nfc);
+                dialog = builder.show();
+                dialog.setCanceledOnTouchOutside(false);
+                Button btnBack = (Button) dialogView.findViewById(R.id.btn_back);
+                btnBack.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
             }
         });
 
@@ -113,7 +117,10 @@ public class WriteTextActivity extends AppCompatActivity {
         });
         if (writeMessageToNfc(message, tag)) {
             Toast.makeText(WriteTextActivity.this, "写入成功！", Toast.LENGTH_SHORT).show();
-
+            if(dialog != null) {
+                dialog.dismiss();
+                dialog = null;
+            }
         }
     }
 

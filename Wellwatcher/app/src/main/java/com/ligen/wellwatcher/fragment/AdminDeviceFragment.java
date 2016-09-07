@@ -3,6 +3,7 @@ package com.ligen.wellwatcher.fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,6 +12,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.ligen.wellwatcher.R;
+import com.ligen.wellwatcher.dao.CheckInfoDao;
+import com.ligen.wellwatcher.model.Checkpoint;
 
 import java.util.List;
 
@@ -20,7 +23,7 @@ import java.util.List;
  */
 public class AdminDeviceFragment extends Fragment{
 
-    String mTitle;
+    String mType;
     List<String> mDevices;
 
     RecyclerView mRvDetail;
@@ -30,7 +33,7 @@ public class AdminDeviceFragment extends Fragment{
     }
 
     public AdminDeviceFragment(String title, List<String> devices) {
-        mTitle = title;
+        mType = title;
         mDevices = devices;
 
     }
@@ -40,7 +43,7 @@ public class AdminDeviceFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         mView = inflater.inflate(R.layout.fragment_watcher, container, false);
         TextView tv = (TextView) mView.findViewById(R.id.tv);
-        tv.setText(mTitle + "巡检路线");
+        tv.setText(mType + "巡检路线");
         mRvDetail = (RecyclerView) mView.findViewById(R.id.rv_checkpoints);
         mRvDetail.setLayoutManager(new LinearLayoutManager(getContext()));
         mRvDetail.setAdapter(new DetailAdapter());
@@ -59,8 +62,18 @@ public class AdminDeviceFragment extends Fragment{
         }
 
         @Override
-        public void onBindViewHolder(DetailViewHolder holder, int position) {
+        public void onBindViewHolder(DetailViewHolder holder, final int position) {
             holder.tv.setText(mDevices.get(position));
+            holder.tv.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+
+                    List<Checkpoint> checkpointList = CheckInfoDao.getDao(getContext()).getCheckpoint(mDevices.get(position), mType);
+                    AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+
+                }
+            });
         }
 
         @Override

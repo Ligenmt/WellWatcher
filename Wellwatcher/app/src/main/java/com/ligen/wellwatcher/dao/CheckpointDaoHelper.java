@@ -44,7 +44,8 @@ public void onCreate(SQLiteDatabase db) {
     String sql_checkpoint = "CREATE TABLE " + TABLE_CHECKPOINT + " (" +
             "checkorder integer primary key autoincrement, " +
             "checkpoint text, " +
-            "devicename text not null" +
+            "devicename text not null, " +
+            "type text not null" +
             ");";
     db.execSQL(sql_checkpoint);
     Log.i(TAG, "table checkpoint created");
