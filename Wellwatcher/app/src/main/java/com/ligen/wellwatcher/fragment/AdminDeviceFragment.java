@@ -72,6 +72,7 @@ public class AdminDeviceFragment extends Fragment{
                     List<Checkpoint> checkpointList = CheckInfoDao.getDao(getContext()).getCheckpoint(mDevices.get(position), mType);
                     AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
 
+
                 }
             });
         }

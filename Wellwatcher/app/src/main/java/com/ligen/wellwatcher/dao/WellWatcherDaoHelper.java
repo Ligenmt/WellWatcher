@@ -8,9 +8,9 @@ import android.util.Log;
 /**
  * Created by ligen on 2016/5/27.
  */
-public class CheckpointDaoHelper extends SQLiteOpenHelper {
+public class WellWatcherDaoHelper extends SQLiteOpenHelper {
 
-    private static final String TAG = "CheckpointDaoHelper";
+    private static final String TAG = "WellWatcherDaoHelper";
     private static final String DB_NAME = "wellwatcher.db";
     private static final String TABLE_TYPE = "type";
     private static final String TABLE_DEVICE = "device";
@@ -19,7 +19,7 @@ public class CheckpointDaoHelper extends SQLiteOpenHelper {
     private static final String TABLE_RECORD = "checkrecord";
     private static final String TABLE_CHECKDEVICE = "checkdevice";
 
-    public CheckpointDaoHelper(Context context) {
+    public WellWatcherDaoHelper(Context context) {
         super(context, DB_NAME, null, 1);
     }
 

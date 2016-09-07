@@ -15,7 +15,7 @@ import java.util.List;
  */
 public class CheckInfoDao {
 
-    CheckpointDaoHelper helper;
+    WellWatcherDaoHelper helper;
 
     public static CheckInfoDao instance;
 
@@ -27,7 +27,7 @@ public class CheckInfoDao {
     }
 
     private CheckInfoDao(Context context) {
-        helper = new CheckpointDaoHelper(context);
+        helper = new WellWatcherDaoHelper(context);
     }
 
     public void addCheckpoint(String checkpoint, String deviceName, String type) {

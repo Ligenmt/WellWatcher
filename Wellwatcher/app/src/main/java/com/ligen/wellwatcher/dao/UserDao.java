@@ -4,7 +4,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.ligen.wellwatcher.model.Checkpoint;
 import com.ligen.wellwatcher.model.User;
 
 import java.util.ArrayList;
@@ -15,7 +14,7 @@ import java.util.List;
  */
 public class UserDao {
 
-    CheckpointDaoHelper helper;
+    WellWatcherDaoHelper helper;
 
     public static UserDao instance;
 
@@ -27,7 +26,7 @@ public class UserDao {
     }
 
     private UserDao(Context context) {
-        helper = new CheckpointDaoHelper(context);
+        helper = new WellWatcherDaoHelper(context);
     }
 
     public void addUser(String username, String password, String type) {
