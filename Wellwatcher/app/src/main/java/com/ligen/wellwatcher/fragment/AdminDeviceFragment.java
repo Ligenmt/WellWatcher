@@ -1,5 +1,6 @@
 package com.ligen.wellwatcher.fragment;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -14,6 +15,7 @@ import android.widget.TextView;
 import com.ligen.wellwatcher.R;
 import com.ligen.wellwatcher.dao.CheckInfoDao;
 import com.ligen.wellwatcher.model.Checkpoint;
+import com.ligen.wellwatcher.view.CheckpointView;
 
 import java.util.List;
 
@@ -32,10 +34,10 @@ public class AdminDeviceFragment extends Fragment{
     public AdminDeviceFragment() {
     }
 
+    @SuppressLint("ValidFragment")
     public AdminDeviceFragment(String title, List<String> devices) {
         mType = title;
         mDevices = devices;
-
     }
 
     @Nullable
@@ -67,12 +69,11 @@ public class AdminDeviceFragment extends Fragment{
             holder.tv.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-
-                    List<Checkpoint> checkpointList = CheckInfoDao.getDao(getContext()).getCheckpoint(mDevices.get(position), mType);
-                    AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-
-
+                List<Checkpoint> checkpointList = CheckInfoDao.getDao(getContext()).getCheckpoint(mDevices.get(position), mType);
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                CheckpointView view = new CheckpointView(getContext(), checkpointList);
+                builder.setView(view);
+                builder.show();
                 }
             });
         }
