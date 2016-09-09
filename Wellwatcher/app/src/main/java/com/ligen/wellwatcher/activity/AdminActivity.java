@@ -136,7 +136,7 @@ public class AdminActivity extends AppCompatActivity implements NavigationView.O
                 logout();
                 break;
             case R.id.action_nfcwrite:
-                startActivity(new Intent(this, WriteTextActivity.class));
+                startActivity(new Intent(this, NfcWriteActivity.class));
                 break;
             case R.id.action_reset:
                 resetData();

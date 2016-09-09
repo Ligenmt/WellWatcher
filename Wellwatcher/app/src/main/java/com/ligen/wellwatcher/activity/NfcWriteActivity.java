@@ -16,12 +16,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ligen.wellwatcher.R;
-import com.ligen.wellwatcher.dao.CheckInfoDao;
 
 import java.nio.charset.Charset;
 import java.util.Locale;
@@ -29,9 +27,9 @@ import java.util.Locale;
 /**
  * 写入nfc文本
  */
-public class WriteTextActivity extends AppCompatActivity {
+public class NfcWriteActivity extends AppCompatActivity {
 
-    private static final String TAG = "WriteTextActivity";
+    private static final String TAG = "NfcWriteActivity";
     private NfcAdapter mNfcAdapter;
     private PendingIntent mPeningIntent;
 
@@ -68,15 +66,15 @@ public class WriteTextActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String text = mEtText.getText().toString();
                 if (TextUtils.isEmpty(text)) {
-                    Toast.makeText(WriteTextActivity.this, "输入不能为空", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(NfcWriteActivity.this, "输入不能为空", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 mText = text;
                 mTvText.setText("巡检项目名为：" + text + "，请将标签靠近！");
                 mEtText.setText(text);
                 mEtText.setEnabled(false);
-                AlertDialog.Builder builder = new AlertDialog.Builder(WriteTextActivity.this);
-                View dialogView = View.inflate(WriteTextActivity.this, R.layout.dialog_nfc_image, null);
+                AlertDialog.Builder builder = new AlertDialog.Builder(NfcWriteActivity.this);
+                View dialogView = View.inflate(NfcWriteActivity.this, R.layout.dialog_nfc_image, null);
                 builder.setView(dialogView);
                 dialog = builder.show();
                 dialog.setCanceledOnTouchOutside(false);
@@ -116,7 +114,7 @@ public class WriteTextActivity extends AppCompatActivity {
                 createTextRecord(mText)
         });
         if (writeMessageToNfc(message, tag)) {
-            Toast.makeText(WriteTextActivity.this, "写入成功！", Toast.LENGTH_SHORT).show();
+            Toast.makeText(NfcWriteActivity.this, "写入成功！", Toast.LENGTH_SHORT).show();
             if(dialog != null) {
                 dialog.dismiss();
                 dialog = null;
@@ -160,7 +158,7 @@ public class WriteTextActivity extends AppCompatActivity {
                 if (ndefFormatable != null) {
                     ndefFormatable.connect();
                     ndefFormatable.format(message);
-                    Toast.makeText(WriteTextActivity.this, "格式化标签..", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(NfcWriteActivity.this, "格式化标签..", Toast.LENGTH_SHORT).show();
                     return true;
                 }
                 return false;

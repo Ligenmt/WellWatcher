@@ -128,8 +128,34 @@ public class NfcReadActivity extends AppCompatActivity implements View.OnClickLi
         animatorSet = new AnimatorSet();
         animatorSet.setInterpolator(new LinearInterpolator());
         animatorSet.playSequentially(transX1, transX2);
-    }
+        transX1.addListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                ++currentCount;
+                mIvCamera.setImageBitmap(null);
+                if (currentCount < checkpointCount) {
+                    mCheckpointList.get(currentCount).getCheckpoint();
+                    mTvCheckpoint.setText(mCheckpointList.get(currentCount).getCheckpoint());
 
+                } else {
+                    //最后一项巡检完，保存记录
+                    int hasError = 1;  //1 正常 2 异常
+                    for(CheckRecord cr : mCheckpointRecordList) {
+                        if(cr.getState() != 1) {
+                            hasError = 2;
+                        }
+                        CheckRecordDao.getDao(NfcReadActivity.this).saveCheckRecord(cr.getUsername(), cr.getDeivce(), cr.getCheckpoint(), cr.getState());
+                    }
+                    CheckRecordDao.getDao(NfcReadActivity.this).saveCheckDevice(mCurrentUser, mDevicename, hasError, new Date());
+
+                    mTvCheckpoint.setText("巡检完成");
+                    Toast.makeText(NfcReadActivity.this, "巡检完成", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(NfcReadActivity.this, WorkerActivity.class));
+                    finish();
+                }
+            }
+        });
+    }
 
     private void initViews() {
 
@@ -169,33 +195,6 @@ public class NfcReadActivity extends AppCompatActivity implements View.OnClickLi
                     mCheckpointRecordList.add(record);
 
                 }
-                transX1.addListener(new AnimatorListenerAdapter() {
-                    @Override
-                    public void onAnimationEnd(Animator animation) {
-                        ++currentCount;
-                        mIvCamera.setImageBitmap(null);
-                        if (currentCount < checkpointCount) {
-                            mCheckpointList.get(currentCount).getCheckpoint();
-                            mTvCheckpoint.setText(mCheckpointList.get(currentCount).getCheckpoint());
-
-                        } else {
-                            //最后一项巡检完，保存记录
-                            int hasError = 1;  //1 正常 2 异常
-                            for(CheckRecord cr : mCheckpointRecordList) {
-                                if(cr.getState() != 1) {
-                                    hasError = 2;
-                                }
-                                CheckRecordDao.getDao(NfcReadActivity.this).saveCheckRecord(cr.getUsername(), cr.getDeivce(), cr.getCheckpoint(), cr.getState());
-                            }
-                            CheckRecordDao.getDao(NfcReadActivity.this).saveCheckDevice(mCurrentUser, mDevicename, hasError, new Date());
-
-                            mTvCheckpoint.setText("巡检完成");
-                            Toast.makeText(NfcReadActivity.this, "巡检完成", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(NfcReadActivity.this, WorkerActivity.class));
-                            finish();
-                        }
-                    }
-                });
                 animatorSet.start();
                 mBtnNext.setText("无异常，下一项");
                 mBtnCamera.setText("有异常");
@@ -203,10 +202,8 @@ public class NfcReadActivity extends AppCompatActivity implements View.OnClickLi
                 break;
 
             case R.id.btn_camera:
-
                 //拍照
                 openCamera(mDevicename);
-
                 break;
         }
 

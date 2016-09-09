@@ -34,7 +34,7 @@
             android:name=".activity.AddDeviceActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.WriteTextActivity"
+            android:name=".activity.NfcWriteActivity"
             android:label="写入模块"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
