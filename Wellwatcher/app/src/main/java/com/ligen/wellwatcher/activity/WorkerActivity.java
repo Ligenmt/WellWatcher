@@ -2,9 +2,13 @@ package com.ligen.wellwatcher.activity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Base64;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -21,6 +25,7 @@ import com.ligen.wellwatcher.model.DeviceRecord;
 import com.ligen.wellwatcher.util.HttpUtil;
 import com.ligen.wellwatcher.util.SharePrerenceUtil;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.util.Date;
 import java.util.List;
@@ -28,8 +33,8 @@ import java.util.List;
 public class WorkerActivity extends AppCompatActivity {
 
     private static final String TAG = "WorkerActivity";
-    public static String currentUser;
-    String currentType;
+    public String mCurrentUser;
+    public String mCurrentType;
 
     private CheckInfoDao dao;
 
@@ -44,19 +49,19 @@ public class WorkerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_worker);
 
-        currentUser = SharePrerenceUtil.getCurrentUser(this);
-        currentType = SharePrerenceUtil.getCurrentType(this);
+        mCurrentUser = SharePrerenceUtil.getCurrentUser(this);
+        mCurrentType = SharePrerenceUtil.getCurrentType(this);
 
-        getSupportActionBar().setTitle("巡检人:" + currentUser);
-        if (currentUser == null) {
+        getSupportActionBar().setTitle("巡检人:" + mCurrentUser);
+        if (mCurrentUser == null) {
             //跳回登陆界面
             startActivity(new Intent(this, LoginActivity.class));
             finish();
         }
         dao = CheckInfoDao.getDao(this);
         mLvDevice = (ListView) findViewById(R.id.lv_device);
-        mDevicesList = dao.getDevicesByType(currentType);
-        mRecordDevices = CheckRecordDao.getDao(this).getAllRecordDevicesByUsername(currentUser);
+        mDevicesList = dao.getDevicesByType(mCurrentType);
+        mRecordDevices = CheckRecordDao.getDao(this).getAllRecordDevicesByUsername(mCurrentUser);
         mAdapter = new WorkerDeviceAdapter(this, mDevicesList, mRecordDevices);
         mLvDevice.setAdapter(mAdapter);
 
@@ -65,8 +70,8 @@ public class WorkerActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        mDevicesList = dao.getDevicesByType(currentType);
-        mRecordDevices = CheckRecordDao.getDao(this).getAllRecordDevicesByUsername(currentUser);
+        mDevicesList = dao.getDevicesByType(mCurrentType);
+        mRecordDevices = CheckRecordDao.getDao(this).getAllRecordDevicesByUsername(mCurrentUser);
         mAdapter = new WorkerDeviceAdapter(this, mDevicesList, mRecordDevices);
         mLvDevice.setAdapter(mAdapter);
     }
@@ -109,11 +114,11 @@ public class WorkerActivity extends AppCompatActivity {
             .setPositiveButton("确定", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    currentUser = SharePrerenceUtil.getCurrentUser(WorkerActivity.this);
+                    mCurrentUser = SharePrerenceUtil.getCurrentUser(WorkerActivity.this);
                     removeUserRecord();
                     Toast.makeText(WorkerActivity.this, "重置成功!", Toast.LENGTH_SHORT).show();
                     List<String> devicesList = dao.getDevicesByType(SharePrerenceUtil.getCurrentType(WorkerActivity.this));
-                    List<DeviceRecord> recordDevices = CheckRecordDao.getDao(WorkerActivity.this).getAllRecordDevicesByUsername(currentUser);
+                    List<DeviceRecord> recordDevices = CheckRecordDao.getDao(WorkerActivity.this).getAllRecordDevicesByUsername(mCurrentUser);
                     mLvDevice.setAdapter(new WorkerDeviceAdapter(WorkerActivity.this, devicesList, recordDevices));
 
                     String filePath = "/mnt/sdcard/wellwatcher";
@@ -121,7 +126,7 @@ public class WorkerActivity extends AppCompatActivity {
                     if (rootFile.isDirectory()) {
                         String[] images = rootFile.list();
                         for (String imagename : images) {
-                            if (imagename.startsWith(currentUser + "_")) {
+                            if (imagename.startsWith(mCurrentUser + "_")) {
                                 File file = new File(rootFile + "/" + imagename);
                                 file.delete();
                                 Log.i(TAG, "delete file:" + imagename);
@@ -143,17 +148,14 @@ public class WorkerActivity extends AppCompatActivity {
      * 移除该用户所有巡检记录
      */
     private void removeUserRecord() {
-        CheckRecordDao.getDao(WorkerActivity.this).removeCheckRecordByUsername(currentUser);
-        CheckRecordDao.getDao(WorkerActivity.this).removeCheckDevicesByUsername(currentUser);
+        CheckRecordDao.getDao(WorkerActivity.this).removeCheckRecordByUsername(mCurrentUser);
+        CheckRecordDao.getDao(WorkerActivity.this).removeCheckDevicesByUsername(mCurrentUser);
     }
 
     /**
      * 上传数据
      */
     private void uploadData() {
-
-        String username = SharePrerenceUtil.getCurrentUser(WorkerActivity.this);
-//        List<DeviceRecord> records = CheckRecordDao.getDao(this).getAllRecordDevicesByUsername(username);
 
         if(!HttpUtil.isConnect(this)) {
             Toast.makeText(WorkerActivity.this, "当前无网络", Toast.LENGTH_SHORT).show();
@@ -167,17 +169,23 @@ public class WorkerActivity extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
 
                         JSONObject data = new JSONObject();
-                        data.put("user", currentUser);
-                        List<DeviceRecord> deviceRecords = CheckRecordDao.getDao(WorkerActivity.this).getAllRecordDevicesByUsername(currentUser);
+                        data.put("user", mCurrentUser);
+                        data.put("type", mCurrentType);
+                        List<DeviceRecord> deviceRecords = CheckRecordDao.getDao(WorkerActivity.this).getAllRecordDevicesByUsername(mCurrentUser);
+                        JSONObject records = new JSONObject();
                         for (DeviceRecord deviceRecord : deviceRecords) {
                             JSONObject device = new JSONObject();
-                            List<CheckRecord> recordList = CheckRecordDao.getDao(WorkerActivity.this).getRecordByUsernameAndDevice(currentUser, deviceRecord.getDevicename());
+                            List<CheckRecord> recordList = CheckRecordDao.getDao(WorkerActivity.this).getRecordByUsernameAndDevice(mCurrentUser, deviceRecord.getDevicename());
                             for (CheckRecord record : recordList) {
                                 device.put(record.getCheckpoint(), record.getState());
                             }
-                            data.put(deviceRecord.getDevicename(), device);
+                            records.put(deviceRecord.getDevicename(), device);
                         }
-                        data.put("updatetime", new Date());
+                        data.put("records", records);
+                        Date date = new Date();
+                        data.put("updatetime", date.toString());
+                        data.put("_id", mCurrentUser + "_" + mCurrentType + "_" + date.toString());
+                        data.put("photos", getRecordCameras());
                         String url = SharePrerenceUtil.getUrl(WorkerActivity.this);
                         try {
                             String returnStr = HttpUtil.doPost(url, data.toJSONString());
@@ -204,6 +212,32 @@ public class WorkerActivity extends AppCompatActivity {
                     }
                 }).show();
 
+    }
+
+    private JSONObject getRecordCameras() {
+
+        JSONObject result = new JSONObject();
+        String prefix = mCurrentType + "_" + mCurrentUser;
+        String filePath = "/mnt/sdcard/wellwatcher";
+        File rootFile = new File(filePath);
+        if(!rootFile.exists()) {
+            rootFile.mkdir();
+        }
+        String[] list = rootFile.list();
+        for (String filename : list) {
+            if(filename.startsWith(prefix)) {
+                File photo = new File(filePath + "/" + filename);
+                Uri uri = Uri.fromFile(photo);
+                Bitmap bitmap = BitmapFactory.decodeFile(uri.getPath());
+                ByteArrayOutputStream bStream = new ByteArrayOutputStream();
+                bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bStream);
+                byte[] bytes = bStream.toByteArray();
+                String base64 = new String(Base64.encodeToString(bytes, Base64.DEFAULT));
+                result.put(filename, base64);
+            }
+        }
+
+        return result;
     }
 
 }

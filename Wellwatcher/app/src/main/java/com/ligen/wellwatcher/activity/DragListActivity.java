@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
+ *
  * Created by ligen on 2016/8/21.
  */
 public class DragListActivity extends AppCompatActivity {

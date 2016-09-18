@@ -213,8 +213,8 @@ public class NfcReadActivity extends AppCompatActivity implements View.OnClickLi
     private Uri imageUri;
 
     private void openCamera(String devicename) {
-        String user = SharePrerenceUtil.getCurrentUser(this);
-        String imgFileName = user + "_" + devicename + "_巡检点" + currentCount;
+//        String user = SharePrerenceUtil.getCurrentUser(this);
+        String imgFileName = mCurrentType + "_" + mCurrentUser + "_" + devicename + "_巡检点" + currentCount;
 
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);//调用android自带的照相机
         //图片保存位置
